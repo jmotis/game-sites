@@ -929,37 +929,24 @@ body {
 @media (max-width: 720px) {
   body { font-size: 15px; }
 
-  /* ── Header reorients: brand centered, hamburger to the right ── */
+  /* ── Header reorients: brand stays left, hamburger to the right ── */
   .site-header__inner {
-    grid-template-columns: 44px 1fr 44px;
+    grid-template-columns: 1fr auto;
     padding: 14px 16px;
     gap: 12px;
   }
 
-  .brand {
-    grid-column: 2;
-    justify-content: center;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .brand__mark { display: none; }
-
-  .brand__text { align-items: center; }
+  .brand { gap: 10px; min-width: 0; }
 
   .brand__name {
-    font-size: 18px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #F4EFE6;
+    font-size: 22px;
+    /* keep desktop family, weight, color (var(--primary)) */
   }
 
   .brand__tagline { display: none; }
 
   .site-nav__toggle {
     display: inline-flex;
-    grid-column: 3;
     justify-self: end;
   }
 
