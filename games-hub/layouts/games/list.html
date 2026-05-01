@@ -1,6 +1,8 @@
 {{ define "main" }}
-{{- $games := .Site.Data.games -}}
-{{- $inDev := .Site.Data.in_development -}}
+{{- $games  := .Site.Data.games -}}
+{{- $feat   := index (where $games "featured" true) 0 -}}
+{{- $others := where $games "featured" "!=" true -}}
+{{- $inDev  := .Site.Data.in_development -}}
 
 <div class="page-body">
   <div class="games-inner">
@@ -9,43 +11,73 @@
     <p class="page-intro">{{ . | plainify }}</p>
     {{- end }}
 
-    <div class="games-list">
-      {{- range $games }}
-        {{- $game := . }}
-      <article class="featured-game">
-        <div class="featured-game__grid{{ if not $game.image }} featured-game__grid--solo{{ end }}">
-          <div>
-            <h2 class="featured-game__title">{{ $game.title }}</h2>
-            {{- with $game.subtitle }}
-            <p class="featured-game__meta">{{ . }}</p>
+    {{/* ── Featured Game ── */}}
+    {{- with $feat }}
+    <div class="featured-game">
+      <div class="featured-game__badge">★ Featured Game</div>
+      <div class="featured-game__grid{{ if not .image }} featured-game__grid--solo{{ end }}">
+        <div>
+          <h2 class="featured-game__title">{{ .title }}</h2>
+          {{- with .subtitle }}
+          <p class="featured-game__meta">{{ . }}</p>
+          {{- end }}
+          {{- with .description }}
+          <p class="featured-game__desc">{{ . }}</p>
+          {{- end }}
+          <div class="btn-row">
+            <a href="{{ .url }}" class="btn btn--inverse">Play the Game →</a>
+            {{- with .teachers_url }}
+            <a href="{{ . }}" class="btn btn--inverse">For Teachers →</a>
             {{- end }}
-            {{- with $game.description }}
-            <p class="featured-game__desc">{{ . }}</p>
-            {{- end }}
-            <div class="btn-row">
-              <a href="{{ $game.url }}" class="btn btn--inverse">Play the Game →</a>
-              {{- with $game.teachers_url }}
-              <a href="{{ . }}" class="btn btn--inverse">For Teachers →</a>
-              {{- end }}
-            </div>
           </div>
-          {{- with $game.image }}
-          <div>
-            <div class="hist-img{{ if $game.cover }} hist-img--cover{{ end }}" style="height: 280px;">
-              <img src="{{ printf "images/%s" . | relURL }}"
-                   alt="{{ $game.image_alt }}"
-                   style="height: 280px;" />
-            </div>
-            {{- with $game.image_caption }}
-            <p class="featured-game__img-caption">{{ . | safeHTML }}</p>
+        </div>
+        {{- with .image }}
+        <div>
+          <div class="hist-img{{ if $feat.cover }} hist-img--cover{{ end }}" style="height: 280px;">
+            <img src="{{ printf "images/%s" . | relURL }}"
+                 alt="{{ $feat.image_alt }}"
+                 style="height: 280px;" />
+          </div>
+          {{- with $feat.image_caption }}
+          <p class="featured-game__img-caption">{{ . | safeHTML }}</p>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+
+    {{/* ── Other Games ── */}}
+    {{- if $others }}
+    <div class="card-section">
+      {{ partial "orn-rule.html" (dict "label" "Other Games" "site" .Site) }}
+      <div class="card-grid">
+        {{- range $others }}
+        <div class="card card--with-cta">
+          {{- with .subtitle }}
+          <p class="card__meta">{{ . }}</p>
+          {{- end }}
+          <h3 class="card__title">{{ .title }}</h3>
+          {{- with .description }}
+          <p class="card__desc">{{ . }}</p>
+          {{- end }}
+          {{- if or .url .teachers_url }}
+          <div class="btn-row card__btn-row">
+            {{- with .url }}
+            <a href="{{ . }}" class="btn btn--primary btn--card">Play the Game →</a>
+            {{- end }}
+            {{- with .teachers_url }}
+            <a href="{{ . }}" class="btn btn--primary btn--card">For Teachers →</a>
             {{- end }}
           </div>
           {{- end }}
         </div>
-      </article>
-      {{- end }}
+        {{- end }}
+      </div>
     </div>
+    {{- end }}
 
+    {{/* ── In Development ── */}}
     {{- if $inDev }}
     <div class="card-section">
       {{ partial "orn-rule.html" (dict "label" "In Development" "site" .Site) }}

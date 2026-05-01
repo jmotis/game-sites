@@ -522,6 +522,27 @@ body {
   font-family: var(--body);
 }
 
+/* Card variant with Play / For Teachers CTAs (Other Games) */
+.card--with-cta {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--with-cta .card__desc {
+  flex: 1;
+}
+
+.card__btn-row {
+  margin-top: 24px;
+}
+
+.btn--card {
+  padding: 14px 24px;
+  font-size: 12px;
+  box-shadow: 3px 3px 0 var(--dark-bg);
+}
+
 /* ============================================================
    PERIOD IMAGE BLOCK (plague home — runaways)
    ============================================================ */
@@ -968,6 +989,7 @@ body {
   /* ── Cards / pillars / lessons ── */
   .card-grid { grid-template-columns: 1fr; gap: 20px; }
   .card { padding: 24px; }
+  .card--with-cta { padding: 28px; }
   .card__title { font-size: 24px; }
 
   .pillars { grid-template-columns: 1fr; }
