@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RRCHNM Games — Preview</title>
+  <meta name="description" content="Preview deployment of two RRCHNM Hugo sites: games.rrchnm.org and 1665plague.rrchnm.org." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Noto+Serif:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', system-ui, sans-serif;
+      background: #FFFDF8;
+      color: #0F0E0C;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 48px;
+    }
+    h1 {
+      font-family: 'Noto Serif', Georgia, serif;
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin: 0 0 16px;
+    }
+    .lede {
+      font-size: 20px;
+      max-width: 720px;
+      margin: 0 0 56px;
+      color: #3A3530;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      display: block;
+      padding: 48px;
+      color: #FFFDF8;
+      text-decoration: none;
+      box-shadow: 6px 6px 0 #0F0E0C;
+      transition: transform 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 #0F0E0C;
+    }
+    .card:focus-visible {
+      outline: 3px solid #0F0E0C;
+      outline-offset: 4px;
+    }
+    .card--hub    { background: #C32A26; }
+    .card--plague { background: #008285; }
+    .card__eyebrow {
+      font-family: 'Figtree', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+    .card__title {
+      font-family: 'Noto Serif', Georgia, serif;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin: 0 0 12px;
+    }
+    .card__url {
+      font-family: 'Figtree', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      opacity: 0.85;
+      margin: 0 0 24px;
+    }
+    .card__cta {
+      font-family: 'Figtree', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .meta {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(15,14,12,0.15);
+      font-size: 13px;
+      color: #5A5648;
+    }
+    .meta a { color: #C32A26; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>RRCHNM Games — Preview</h1>
+    <p class="lede">Preview deployment of two Hugo sites built from a shared theme. Production targets are <code>games.rrchnm.org</code> and <code>1665plague.rrchnm.org</code>.</p>
+
+    <div class="grid">
+      <a class="card card--hub" href="hub/">
+        <p class="card__eyebrow">★ The Collection</p>
+        <h2 class="card__title">RRCHNM Games</h2>
+        <p class="card__url">games.rrchnm.org</p>
+        <p class="card__cta">Visit the hub →</p>
+      </a>
+
+      <a class="card card--plague" href="plague/">
+        <p class="card__eyebrow">A Historical Twine Game</p>
+        <h2 class="card__title">Gaming the Great Plague</h2>
+        <p class="card__url">1665plague.rrchnm.org</p>
+        <p class="card__cta">Enter London, 1665 →</p>
+      </a>
+    </div>
+
+    <p class="meta">Source: <a href="https://github.com/jmotis/game-sites">github.com/jmotis/game-sites</a> · Built with Hugo · Direction D design system</p>
+  </main>
+</body>
+</html>

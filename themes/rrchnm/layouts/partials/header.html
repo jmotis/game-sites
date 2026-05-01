@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="{{ "/" | relURL }}" class="brand" aria-label="{{ .Site.Params.siteName }} — home">
+    <a href="{{ .Site.Home.RelPermalink }}" class="brand" aria-label="{{ .Site.Params.siteName }} — home">
       {{- partial "rrchnm-mark.html" . -}}
       <div class="brand__text">
         <span class="brand__name">{{ .Site.Params.siteName }}</span>
@@ -10,11 +10,9 @@
     <nav class="site-nav" aria-label="Main navigation">
       {{- $currentPage := . -}}
       {{- range .Site.Menus.main -}}
-        {{- $isActive := or
-              (and $currentPage.IsHome (eq .URL "/"))
-              (and (not $currentPage.IsHome) (ne .URL "/") (strings.HasPrefix $currentPage.RelPermalink .URL))
-        -}}
-        <a href="{{ .URL }}"
+        {{- $url := .URL | relURL -}}
+        {{- $isActive := eq $url $currentPage.RelPermalink -}}
+        <a href="{{ $url }}"
            class="site-nav__link{{ if $isActive }} site-nav__link--active{{ end }}"
            {{ if $isActive }}aria-current="page"{{ end }}>
           {{- .Name -}}

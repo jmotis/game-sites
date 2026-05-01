@@ -18,8 +18,8 @@
 {{/* ── CTA bar (below hero) ── */}}
 <div class="cta-bar">
   <div class="cta-bar__inner">
-    <a href="/game/" class="btn btn--primary">Play the Game →</a>
-    <a href="/pedagogical-materials/" class="btn btn--primary">For Teachers →</a>
+    <a href="{{ "game/" | relURL }}" class="btn btn--primary">Play the Game →</a>
+    <a href="{{ "pedagogical-materials/" | relURL }}" class="btn btn--primary">For Teachers →</a>
   </div>
 </div>
 
@@ -84,7 +84,7 @@
         Free, classroom-tested resources designed to be used before, during, and after gameplay.
         Aligned to C3 Framework standards.
       </p>
-      <a href="/pedagogical-materials/" class="btn btn--primary" style="box-shadow: 4px 4px 0 #FFFDF8;">
+      <a href="{{ "pedagogical-materials/" | relURL }}" class="btn btn--primary" style="box-shadow: 4px 4px 0 #FFFDF8;">
         Pedagogical Materials →
       </a>
     </div>
