@@ -1,6 +1,4 @@
 {{ define "main" }}
-{{- $details := .Site.Data.game_details -}}
-
 {{/* ── Hero ── */}}
 <section class="hero" aria-label="Site hero">
   <img class="hero__img hero__img--tall"
@@ -75,28 +73,6 @@
     </p>
   </div>
 
-  {{/* ── Teach with the game ── */}}
-  <div class="dark-section">
-    <div>
-      <p class="dark-section__eyebrow">For Teachers</p>
-      <h2 class="dark-section__title">Teach with the game.</h2>
-      <p class="dark-section__body">
-        Free, classroom-tested resources designed to be used before, during, and after gameplay.
-        Aligned to C3 Framework standards.
-      </p>
-      <a href="{{ "pedagogical-materials/" | relURL }}" class="btn btn--primary" style="box-shadow: 4px 4px 0 #FFFDF8;">
-        Pedagogical Materials →
-      </a>
-    </div>
-    <dl class="game-dl">
-      {{- range $details }}
-      <div class="game-dl__row">
-        <dt class="game-dl__key">{{ .key }}</dt>
-        <dd class="game-dl__val">{{ .value }}</dd>
-      </div>
-      {{- end }}
-    </dl>
-  </div>
 
 </div>
 {{ end }}

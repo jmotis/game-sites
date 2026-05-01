@@ -278,6 +278,24 @@ Hugo searches each site's `layouts/` directory before falling back to the theme'
 
 ## Design system reference
 
+### Brand palette (source of truth)
+
+The official brand palette these sites draw from. These are the canonical hex values; the per-site `--primary*` tokens below are derived from them.
+
+| Name | Hex |
+|---|---|
+| George Mason Green | `#005239` |
+| George Mason Gold | `#FFC733` |
+| PANTONE Black 7C (Black) | `#333333` |
+| PANTONE 173C (Red) | `#CC4824` |
+| PANTONE 321C (Teal) | `#008285` |
+| PANTONE 653C (Navy) | `#004F71` |
+| PANTONE Cool Grey 10 | `#727579` |
+| True Black | `#000000` |
+| RRCHNM Red | `#C32A26` |
+
+Don't substitute approximations — the brand wordmark, primary buttons, and per-site accents must use these exact values. Variants used purely for accessibility (e.g. on-dark on-light shades that meet WCAG 2.1 AA contrast) live alongside as `--primary-dark` / `--primary-bright` / etc., but the unmodified brand color must remain visible in marquee positions (header wordmark, primary CTA fill).
+
 ### Colors
 
 | Token | Hub (RRCHNM Red) | Plague (GMU Teal) |

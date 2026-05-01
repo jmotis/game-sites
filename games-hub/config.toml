@@ -7,11 +7,10 @@ theme         = "rrchnm"
 [params]
   siteName     = "RRCHNM Games"
   tagline      = "Learning History Through Play"
-  primary       = "#C32A26"
-  primaryDark   = "#A02220"
-  primaryDeep   = "#761815"
-  primarySoft   = "#F7E7E6"
-  primaryBright = "#E66662"
+  primary      = "#C32A26"
+  primaryDark  = "#A02220"
+  primaryDeep  = "#761815"
+  primarySoft  = "#F7E7E6"
   contactEmail = "chnm@gmu.edu"
 
 [[menus.main]]

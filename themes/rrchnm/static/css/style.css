@@ -85,7 +85,9 @@ body {
   font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: var(--primary-bright);
+  /* WCAG 1.4.3 logotype exception: brand wordmark is exempt from the
+     contrast minimum, so we use the canonical brand color. */
+  color: var(--primary);
   line-height: 1;
 }
 
@@ -119,8 +121,11 @@ body {
 
 .site-nav__link:hover,
 .site-nav__link--active {
-  color: var(--primary-bright);
-  border-bottom-color: var(--primary-bright);
+  /* Text stays cream (high contrast); the brand-color underline is the
+     visual indicator. SC 1.4.11 (3:1) governs the underline as a
+     non-text UI component, which the brand colors clear on the dark
+     header. */
+  border-bottom-color: var(--primary);
 }
 
 /* ── Hamburger toggle (hidden on desktop) ── */
@@ -623,72 +628,6 @@ body {
 }
 
 /* ============================================================
-   DARK SECTION — "Teach with the game" (plague home)
-   ============================================================ */
-.dark-section {
-  background: var(--dark-bg);
-  color: #FFFDF8;
-  padding: 56px;
-  margin-bottom: 64px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.dark-section__eyebrow {
-  font-family: var(--sans);
-  font-size: 11px;
-  color: var(--primary-bright);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-
-.dark-section__title {
-  font-family: var(--serif);
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  line-height: 1.1;
-}
-
-.dark-section__body {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  color: #D5CDB8;
-  font-family: var(--body);
-}
-
-/* ── Game details DL ── */
-.game-dl { margin: 0; }
-
-.game-dl__row {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px dashed #5A5648;
-}
-
-.game-dl__key {
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #A8A095;
-  font-weight: 700;
-}
-
-.game-dl__val {
-  font-family: var(--serif);
-  font-size: 18px;
-  color: #FFFDF8;
-  font-weight: 500;
-}
-
-/* ============================================================
    ABOUT PAGE
    ============================================================ */
 .about-inner {
@@ -910,12 +849,6 @@ body {
     border-top: 2px solid var(--dark-bg);
   }
 
-  .dark-section {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 40px;
-  }
-
   .lesson { grid-template-columns: 1fr 140px; }
   .lesson__meta { grid-column: 2; }
   .lesson .btn--download { grid-column: 1 / -1; justify-self: start; }
@@ -1039,16 +972,6 @@ body {
     border-top: none;
   }
   .pillar__title { font-size: 24px; }
-
-  .dark-section {
-    padding: 32px 24px;
-    margin-bottom: 48px;
-    gap: 32px;
-  }
-  .dark-section__title { font-size: 28px; }
-  .dark-section__body { font-size: 15px; }
-
-  .game-dl__val { font-size: 16px; }
 
   .lesson {
     grid-template-columns: 1fr;
