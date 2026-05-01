@@ -12,5 +12,8 @@
     --primary-dark: {{ .Site.Params.primaryDark }};
     --primary-deep: {{ .Site.Params.primaryDeep }};
     --primary-soft: {{ .Site.Params.primarySoft }};
+    {{- with .Site.Params.primaryOnDark }}
+    --primary-on-dark: {{ . }};
+    {{- end }}
   }
 </style>
