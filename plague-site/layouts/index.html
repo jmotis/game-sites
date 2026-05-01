@@ -30,19 +30,6 @@
     </div>
   </div>
 
-  {{/* ── Runaways image block ── */}}
-  <div class="period-block">
-    <div class="hist-img" style="height: 300px;">
-      <img src="{{ "images/runaways-fleeing.jpg" | relURL }}"
-           alt="Runaways fleeing from the plague, English popular print"
-           style="height: 300px;" />
-    </div>
-    <div class="period-block__caption-bar">
-      <p class="period-block__title">"Runaways fleeing from the Plague"</p>
-      <p class="period-block__source">English popular print · Wellcome Collection</p>
-    </div>
-  </div>
-
   {{/* ── Inside the Game ── */}}
   {{ partial "orn-rule.html" (dict "label" "Inside the Game" "site" .Site) }}
 
@@ -64,13 +51,17 @@
     </div>
   </div>
 
-  {{/* ── London Bridge banner ── */}}
-  <div class="banner-img">
-    <img src="{{ "images/london-bridge.jpg" | relURL }}"
-         alt="Claude de Jongh, View of Old London Bridge, c. 1632" />
-    <p class="banner-img__caption">
-      Claude de Jongh, <em>View of Old London Bridge</em>, c. 1632 — the city as the game's Londoners would have known it.
-    </p>
+  {{/* ── Runaways image block ── */}}
+  <div class="period-block">
+    <div class="hist-img" style="height: 300px;">
+      <img src="{{ "images/runaways-fleeing.jpg" | relURL }}"
+           alt="Runaways fleeing from the plague, English popular print"
+           style="height: 300px;" />
+    </div>
+    <div class="period-block__caption-bar">
+      <p class="period-block__title">"Runaways fleeing from the Plague"</p>
+      <p class="period-block__source">English popular print · Wellcome Collection</p>
+    </div>
   </div>
 
 
