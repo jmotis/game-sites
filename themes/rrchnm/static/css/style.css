@@ -85,7 +85,7 @@ body {
   font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: var(--primary);
+  color: var(--primary-bright);
   line-height: 1;
 }
 
@@ -119,8 +119,8 @@ body {
 
 .site-nav__link:hover,
 .site-nav__link--active {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
+  color: var(--primary-bright);
+  border-bottom-color: var(--primary-bright);
 }
 
 /* ── Hamburger toggle (hidden on desktop) ── */
@@ -639,7 +639,7 @@ body {
 .dark-section__eyebrow {
   font-family: var(--sans);
   font-size: 11px;
-  color: var(--primary);
+  color: var(--primary-bright);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 700;
@@ -875,7 +875,7 @@ body {
   margin: 0 auto;
   font-family: var(--sans);
   font-size: 11px;
-  color: #807866;
+  color: #969080;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1009,6 +1009,7 @@ body {
     padding: 32px 24px;
     margin-bottom: 48px;
   }
+  .featured-game__grid > * { min-width: 0; }
   .featured-game__badge {
     left: 24px;
     font-size: 10px;
@@ -1016,6 +1017,7 @@ body {
   }
   .featured-game__title { font-size: 30px; }
   .featured-game__desc { font-size: 16px; }
+  .hist-img--cover { width: 100%; max-width: 280px; }
 
   .btn { padding: 14px 24px; font-size: 12px; letter-spacing: 0.18em; }
   .btn--primary,
