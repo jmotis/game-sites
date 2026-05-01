@@ -725,6 +725,17 @@ body {
 .bib-entry__author { font-weight: 700; }
 .bib-entry__place  { color: #5A5648; }
 
+.bib-entry__url {
+  display: inline-block;
+  margin-top: 4px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
 /* ============================================================
    GAMES LIST PAGE (hub)
    ============================================================ */
