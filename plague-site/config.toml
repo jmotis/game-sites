@@ -7,11 +7,10 @@ theme         = "rrchnm"
 [params]
   siteName     = "Gaming the Great Plague"
   tagline      = "Can You Survive Living in London, 1665–1666?"
-  primary       = "#008285"
-  primaryDark   = "#006568"
-  primaryDeep   = "#00484A"
-  primarySoft   = "#E5F1F1"
-  primaryBright = "#1AAFB2"
+  primary      = "#008285"
+  primaryDark  = "#006568"
+  primaryDeep  = "#00484A"
+  primarySoft  = "#E5F1F1"
   contactEmail = "chnm@gmu.edu"
 
 [[menus.main]]
