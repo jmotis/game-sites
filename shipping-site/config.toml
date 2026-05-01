@@ -7,10 +7,10 @@ theme         = "rrchnm"
 [params]
   siteName     = "Learning the Ropes"
   tagline      = "Sail a British merchant ship through the world's oceans, c. 1812."
-  primary      = "#7CA9D6"
-  primaryDark  = "#2C5C8F"
-  primaryDeep  = "#143A60"
-  primarySoft  = "#EAF1F8"
+  primary      = "#004F71"
+  primaryDark  = "#003B58"
+  primaryDeep  = "#002A40"
+  primarySoft  = "#E5EDF2"
   contactEmail = "chnm@gmu.edu"
 
 [[menus.main]]

@@ -4,7 +4,7 @@ Hugo sites for RRCHNM games, sharing a single theme:
 
 - **`games-hub/`** → production target `games.rrchnm.org` — RRCHNM Red `#C32A26`
 - **`plague-site/`** → production target `1665plague.rrchnm.org` — GMU Teal `#008285` (Pantone 321C)
-- **`shipping-site/`** → production target `1812shipping.rrchnm.org` — Sky Blue `#7CA9D6`
+- **`shipping-site/`** → production target `1812shipping.rrchnm.org` — GMU Navy `#004F71` (Pantone 653C)
 - **`themes/rrchnm/`** — shared theme. The sites differ only in colors, content, and which page layouts they override.
 
 Brand fonts: Figtree · Noto Serif · Open Sans (GMU brand stack).
