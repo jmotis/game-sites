@@ -485,12 +485,12 @@ body {
 /* ============================================================
    IN-DEVELOPMENT CARDS (hub home)
    ============================================================ */
-.card-section { padding-bottom: 32px; }
-
-/* Hub home ends with a .card-section directly inside .page-body — bump
-   its bottom padding to match the 56px end-of-content gap used on the
-   plague and shipping home pages (where .period-block supplies it). */
-.page-body > .card-section:last-child { padding-bottom: 56px; }
+/* Margin (not padding) so the trailing .card-section's bottom space
+   collapses with .site-footer's 80px margin-top — otherwise we'd add
+   to the footer gap rather than overlap it. Inter-section spacing on
+   the games list is unaffected (collapsed margins between siblings
+   still resolve to 32px). */
+.card-section { margin-bottom: 32px; }
 
 .card-grid {
   display: grid;
@@ -659,7 +659,7 @@ body {
    ABOUT PAGE
    ============================================================ */
 .about-inner {
-  padding: 64px 0 56px;
+  padding: 64px 0 0;
   max-width: 880px;
   margin: 0 auto;
 }
@@ -727,7 +727,7 @@ body {
    BIBLIOGRAPHY PAGE
    ============================================================ */
 .bib-inner {
-  padding: 64px 0 56px;
+  padding: 64px 0 0;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -777,14 +777,7 @@ body {
    GAMES LIST PAGE (hub)
    ============================================================ */
 .games-inner {
-  padding: 64px 0 56px;
-}
-
-/* Trailing card-section's own padding-bottom would compound with
-   .games-inner's, so zero it out — .games-inner alone supplies the
-   56px bottom gap before the footer. */
-.games-inner > .card-section:last-child {
-  padding-bottom: 0;
+  padding: 64px 0 0;
 }
 
 .games-list {
@@ -796,7 +789,7 @@ body {
    PEDAGOGICAL MATERIALS PAGE
    ============================================================ */
 .pedagogy-inner {
-  padding: 64px 0 56px;
+  padding: 64px 0 0;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -1046,7 +1039,7 @@ body {
   .about-inner,
   .bib-inner,
   .games-inner,
-  .pedagogy-inner { padding: 40px 0; }
+  .pedagogy-inner { padding: 40px 0 0; }
 
   .about-section { margin-top: 32px; padding-top: 24px; }
   .about-section__label { font-size: 16px; }
