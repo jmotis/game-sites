@@ -59,6 +59,15 @@ jobs:
             --destination "${GITHUB_WORKSPACE}/public/plague" \
             --baseURL "${{ steps.pages.outputs.base_url }}/plague/"
 
+      - name: Build shipping-site → public/shipping/
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo --gc --minify \
+            --source shipping-site \
+            --destination "${GITHUB_WORKSPACE}/public/shipping" \
+            --baseURL "${{ steps.pages.outputs.base_url }}/shipping/"
+
       - name: Add landing page → public/index.html
         run: cp landing/index.html public/index.html
 
