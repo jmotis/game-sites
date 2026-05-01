@@ -685,7 +685,7 @@ body {
 
 .about-section__label {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 18px;
   color: var(--primary);
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -1025,6 +1025,7 @@ body {
   .pedagogy-inner { padding: 40px 0; }
 
   .about-section { margin-top: 32px; padding-top: 24px; }
+  .about-section__label { font-size: 16px; }
   .about-section__body { font-size: 16px; }
 
   .bib-entry__text { font-size: 15px; }
