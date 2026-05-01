@@ -1,15 +1,15 @@
 {{ define "main" }}
-{{/* ── Hero (image-less variant — pure colour block until period art is sourced) ── */}}
+{{/* ── Hero ── */}}
 <section class="hero" aria-label="Site hero">
-  <div class="hero__img hero__img--tall"
-       style="background: linear-gradient(180deg, var(--primary) 0%, var(--primary-deep) 100%);"
-       role="img"
-       aria-label="Sky-blue gradient placeholder"></div>
+  <img class="hero__img hero__img--tall"
+       src="{{ "images/harbour.jpg" | relURL }}"
+       alt="A British harbour scene with two warships at anchor and small craft in the foreground, late 18th / early 19th century"
+       style="filter: none; object-position: center 40%;" />
   <div class="hero__gradient hero__gradient--dark" aria-hidden="true"></div>
   <div class="hero__content hero__content--plague">
     <h1 class="hero__title hero__title--plague">
       Learning<br />
-      the <span class="hero__title-accent">Ropes</span>.
+      the <span class="hero__title-accent" style="color: #FFC733;">Ropes</span>.
     </h1>
   </div>
 </section>
