@@ -9,9 +9,10 @@
       {{- range $entries }}
       <li class="bib-entry">
         <p class="bib-entry__text">
-          <span class="bib-entry__author">{{ .author }}</span>
-          {{" "}}<em>{{ .title }}</em>
-          {{" "}}<span class="bib-entry__place">{{ .place }}</span>
+          {{ .text | safeHTML }}
+          {{- with .url }}
+          <a class="bib-entry__url" href="{{ . }}" rel="noopener noreferrer" target="_blank">{{ . }}</a>
+          {{- end }}
         </p>
       </li>
       {{- end }}
