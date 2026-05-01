@@ -10,7 +10,7 @@
 
     {{- range $sections }}
     <div class="about-section">
-      <p class="about-section__label">{{ .label }}</p>
+      <h2 class="about-section__label">{{ .label }}</h2>
       <div class="about-section__body">{{ .body | safeHTML }}</div>
     </div>
     {{- end }}
