@@ -11,6 +11,9 @@ theme         = "rrchnm"
   primaryDark  = "#003B58"
   primaryDeep  = "#002A40"
   primarySoft  = "#E5EDF2"
+  # GMU Gold — substitutes for primary on the dark header surface where
+  # navy fails SC 1.4.11 (3:1). Used for nav underline + focus ring only.
+  primaryOnDark = "#FFC733"
   contactEmail = "chnm@gmu.edu"
 
 [[menus.main]]

@@ -6,10 +6,11 @@
 
 /* ── Custom properties (set per-site in <head>) ── */
 :root {
-  --primary:       #C32A26;
-  --primary-dark:  #A02220;
-  --primary-deep:  #761815;
-  --primary-soft:  #F7E7E6;
+  --primary:         #C32A26;
+  --primary-dark:    #A02220;
+  --primary-deep:    #761815;
+  --primary-soft:    #F7E7E6;
+  --primary-on-dark: var(--primary);
   --ink:           #1A1A1A;
   --deep:          #004F71;
   --page-bg:       #FFFDF8;
@@ -123,9 +124,10 @@ body {
 .site-nav__link--active {
   /* Text stays cream (high contrast); the brand-color underline is the
      visual indicator. SC 1.4.11 (3:1) governs the underline as a
-     non-text UI component, which the brand colors clear on the dark
-     header. */
-  border-bottom-color: var(--primary);
+     non-text UI component. Defaults to --primary; sites whose primary
+     fails 3:1 on the dark header (e.g. shipping's GMU Navy) override
+     --primary-on-dark with a brand-approved colour that clears it. */
+  border-bottom-color: var(--primary-on-dark);
 }
 
 /* ── Hamburger toggle (hidden on desktop) ── */
@@ -146,7 +148,7 @@ body {
 }
 
 .site-nav__toggle:focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--primary-on-dark);
   outline-offset: 2px;
 }
 
