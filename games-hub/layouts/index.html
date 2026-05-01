@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $feat  := .Site.Data.featured_game -}}
+{{- $feat  := index (where .Site.Data.games "featured" true) 0 -}}
 {{- $inDev := .Site.Data.in_development -}}
 
 {{/* ── Hero ── */}}
@@ -32,7 +32,7 @@
       </div>
       <div>
         <div class="hist-img" style="height: 280px;">
-          <img src="{{ "images/lord-have-mercy.jpg" | relURL }}"
+          <img src="{{ printf "images/%s" $feat.image | relURL }}"
                alt="{{ $feat.image_alt }}"
                style="height: 280px;" />
         </div>

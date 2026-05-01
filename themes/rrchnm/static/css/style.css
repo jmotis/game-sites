@@ -352,6 +352,12 @@ body {
   align-items: center;
 }
 
+/* When a game has no image yet, the block goes single-column */
+.featured-game__grid--solo {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+}
+
 .featured-game__title {
   font-family: var(--serif);
   font-size: 50px;
@@ -711,6 +717,18 @@ body {
 
 .bib-entry__author { font-weight: 700; }
 .bib-entry__place  { color: #5A5648; }
+
+/* ============================================================
+   GAMES LIST PAGE (hub)
+   ============================================================ */
+.games-inner {
+  padding: 64px 0;
+}
+
+.games-list {
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
 
 /* ============================================================
    PEDAGOGICAL MATERIALS PAGE

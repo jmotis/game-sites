@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{- $games := .Site.Data.games -}}
+{{- $inDev := .Site.Data.in_development -}}
+
+<div class="page-body">
+  <div class="games-inner">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Content }}
+    <p class="page-intro">{{ . | plainify }}</p>
+    {{- end }}
+
+    <div class="games-list">
+      {{- range $games }}
+        {{- $game := . }}
+      <article class="featured-game">
+        <div class="featured-game__grid{{ if not $game.image }} featured-game__grid--solo{{ end }}">
+          <div>
+            <h2 class="featured-game__title">{{ $game.title }}</h2>
+            {{- with $game.subtitle }}
+            <p class="featured-game__meta">{{ . }}</p>
+            {{- end }}
+            {{- with $game.description }}
+            <p class="featured-game__desc">{{ . }}</p>
+            {{- end }}
+            <a href="{{ $game.url }}" class="btn btn--inverse">Visit the game →</a>
+          </div>
+          {{- with $game.image }}
+          <div>
+            <div class="hist-img" style="height: 280px;">
+              <img src="{{ printf "images/%s" . | relURL }}"
+                   alt="{{ $game.image_alt }}"
+                   style="height: 280px;" />
+            </div>
+            {{- with $game.image_caption }}
+            <p class="featured-game__img-caption">{{ . | safeHTML }}</p>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+
+    {{- if $inDev }}
+    <div class="card-section">
+      {{ partial "orn-rule.html" (dict "label" "In Development" "site" .Site) }}
+      <div class="card-grid">
+        {{- range $inDev }}
+        <div class="card">
+          <p class="card__meta">{{ .meta }}</p>
+          <h3 class="card__title">{{ .title }}</h3>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{ end }}
