@@ -467,11 +467,11 @@ body {
   align-items: center;
   gap: 16px;
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.32em;
+  font-size: 18px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--dark-bg);
+  color: var(--primary);
   margin-bottom: 32px;
 }
 
@@ -687,7 +687,7 @@ body {
   font-family: var(--sans);
   font-size: 18px;
   color: var(--primary);
-  letter-spacing: 0.22em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 12px;
@@ -1027,6 +1027,8 @@ body {
   .about-section { margin-top: 32px; padding-top: 24px; }
   .about-section__label { font-size: 16px; }
   .about-section__body { font-size: 16px; }
+
+  .orn-rule { font-size: 16px; }
 
   .bib-entry__text { font-size: 15px; }
 
