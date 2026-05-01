@@ -1,10 +1,11 @@
 # game-sites
 
-Two Hugo sites for RRCHNM games, sharing a single theme:
+Hugo sites for RRCHNM games, sharing a single theme:
 
 - **`games-hub/`** → production target `games.rrchnm.org` — RRCHNM Red `#C32A26`
 - **`plague-site/`** → production target `1665plague.rrchnm.org` — GMU Teal `#008285` (Pantone 321C)
-- **`themes/rrchnm/`** — shared theme. The two sites differ only in colors, content, and which page layouts they override.
+- **`shipping-site/`** → production target `1812shipping.rrchnm.org` — Sky Blue `#7CA9D6`
+- **`themes/rrchnm/`** — shared theme. The sites differ only in colors, content, and which page layouts they override.
 
 Brand fonts: Figtree · Noto Serif · Open Sans (GMU brand stack).
 
@@ -15,6 +16,7 @@ Brand fonts: Figtree · Noto Serif · Open Sans (GMU brand stack).
   - Landing: <https://jmotis.github.io/game-sites/>
   - Hub: <https://jmotis.github.io/game-sites/hub/>
   - Plague: <https://jmotis.github.io/game-sites/plague/>
+  - Shipping (Learning the Ropes): <https://jmotis.github.io/game-sites/shipping/>
 - Plague Twine game (external): <https://jmotis.github.io/GamingtheGreatPlague>
 - Adventures in Illuminating Twine game (external): <https://jmotis.github.io/Adventures-in-Illuminating.html>
 

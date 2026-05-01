@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{/* ── Hero (image-less variant — pure colour block until period art is sourced) ── */}}
+<section class="hero" aria-label="Site hero">
+  <div class="hero__img hero__img--tall"
+       style="background: linear-gradient(180deg, var(--primary) 0%, var(--primary-deep) 100%);"
+       role="img"
+       aria-label="Sky-blue gradient placeholder"></div>
+  <div class="hero__gradient hero__gradient--dark" aria-hidden="true"></div>
+  <div class="hero__content hero__content--plague">
+    <h1 class="hero__title hero__title--plague">
+      Learning<br />
+      the <span class="hero__title-accent">Ropes</span>.
+    </h1>
+  </div>
+</section>
+
+{{/* ── CTA bar (below hero) ── */}}
+<div class="cta-bar">
+  <div class="cta-bar__inner">
+    <a href="https://jmotis.github.io/Shipping.html" class="btn btn--primary">Play the Game →</a>
+    <a href="{{ "pedagogical-materials/" | relURL }}" class="btn btn--primary">For Teachers →</a>
+  </div>
+</div>
+
+<div class="page-body">
+
+  {{/* ── Intro with drop cap ── */}}
+  <div class="drop-cap-section">
+    <div class="drop-cap-section--plague">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{/* ── Inside the Game ── */}}
+  {{ partial "orn-rule.html" (dict "label" "Inside the Game" "site" .Site) }}
+
+  <div class="pillars" role="list">
+    <div class="pillar" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Seamanship</h2>
+      <p class="pillar__desc">Hand, reef, and steer. Every line on deck has a name — and a purpose.</p>
+    </div>
+    <div class="pillar pillar--alt" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Cargo</h2>
+      <p class="pillar__desc">Tea, sugar, timber, and cotton. The hold is where the voyage pays for itself.</p>
+    </div>
+    <div class="pillar" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Crew</h2>
+      <p class="pillar__desc">Master, mates, and ordinary seamen. A hierarchy held together by custom and the articles.</p>
+    </div>
+  </div>
+
+</div>
+{{ end }}

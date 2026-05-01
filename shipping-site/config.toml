@@ -1,0 +1,34 @@
+baseURL       = "https://1812shipping.rrchnm.org/"
+title         = "Learning the Ropes"
+languageCode  = "en-us"
+themesDir     = "../themes"
+theme         = "rrchnm"
+
+[params]
+  siteName     = "Learning the Ropes"
+  tagline      = "Sail a British merchant ship through the world's oceans, c. 1812."
+  primary      = "#7CA9D6"
+  primaryDark  = "#2C5C8F"
+  primaryDeep  = "#143A60"
+  primarySoft  = "#EAF1F8"
+  contactEmail = "chnm@gmu.edu"
+
+[[menus.main]]
+  name   = "Home"
+  url    = "/"
+  weight = 1
+
+[[menus.main]]
+  name   = "Game"
+  url    = "https://jmotis.github.io/Shipping.html"
+  weight = 2
+
+[[menus.main]]
+  name   = "Pedagogical Materials"
+  url    = "/pedagogical-materials/"
+  weight = 3
+
+[[menus.main]]
+  name   = "About"
+  url    = "/about/"
+  weight = 4
