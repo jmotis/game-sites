@@ -318,13 +318,17 @@ body {
   filter: sepia(0.18) contrast(1.05);
 }
 
-/* Game cover art: no sepia, no crop. Letterboxes against the parent block. */
+/* Game cover art: square image slot, no sepia, centered in its column. */
 .hist-img--cover {
   background: transparent;
+  width: 280px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hist-img--cover img {
   filter: none;
-  object-fit: contain;
+  /* image is square; container is square; cover = no crop, no letterbox */
 }
 
 /* ============================================================
