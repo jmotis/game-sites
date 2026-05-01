@@ -123,6 +123,46 @@ body {
   border-bottom-color: var(--primary);
 }
 
+/* ── Hamburger toggle (hidden on desktop) ── */
+.site-nav__toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid #F4EFE6;
+  border-radius: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  color: inherit;
+}
+
+.site-nav__toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.site-nav__toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #F4EFE6;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.site-nav__toggle[aria-expanded="true"] .site-nav__toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.site-nav__toggle[aria-expanded="true"] .site-nav__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.site-nav__toggle[aria-expanded="true"] .site-nav__toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -839,4 +879,235 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 960px)
+   ============================================================ */
+@media (max-width: 960px) {
+  .site-header__inner,
+  .page-body,
+  .cta-bar,
+  .site-footer__inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero__content { left: 32px; right: 32px; bottom: 28px; }
+  .hero__title { font-size: 48px; }
+  .hero__title--plague { font-size: 64px; }
+  .hero__img { height: 380px; }
+  .hero__img--tall { height: 420px; }
+
+  .featured-game { padding: 40px; }
+  .featured-game__grid { grid-template-columns: 1fr; gap: 32px; }
+  .featured-game__title { font-size: 40px; }
+
+  .pillars { grid-template-columns: 1fr 1fr; }
+  .pillar:nth-child(2) { border-right: none; }
+  .pillar:last-child {
+    grid-column: 1 / -1;
+    border-top: 2px solid var(--dark-bg);
+  }
+
+  .dark-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .lesson { grid-template-columns: 1fr 140px; }
+  .lesson__meta { grid-column: 2; }
+  .lesson .btn--download { grid-column: 1 / -1; justify-self: start; }
+
+  .page-title { font-size: 48px; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 720px)
+   ============================================================ */
+@media (max-width: 720px) {
+  body { font-size: 15px; }
+
+  /* ── Header reorients: brand centered, hamburger to the right ── */
+  .site-header__inner {
+    grid-template-columns: 44px 1fr 44px;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .brand {
+    grid-column: 2;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .brand__mark { display: none; }
+
+  .brand__text { align-items: center; }
+
+  .brand__name {
+    font-size: 18px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #F4EFE6;
+  }
+
+  .brand__tagline { display: none; }
+
+  .site-nav__toggle {
+    display: inline-flex;
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #1F1B16;
+    border-bottom: 4px solid var(--primary);
+    padding: 8px 0;
+    z-index: 50;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .site-nav.is-open { display: flex; }
+
+  .site-header { position: relative; }
+
+  .site-nav__link {
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.08);
+    font-size: 14px;
+  }
+
+  .site-nav__link:last-child { border-bottom: none; }
+
+  .site-nav__link:hover,
+  .site-nav__link--active {
+    background: rgba(195, 42, 38, 0.12);
+    border-bottom-color: rgba(244, 239, 230, 0.08);
+  }
+
+  /* ── Page padding ── */
+  .page-body,
+  .cta-bar,
+  .site-footer__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* ── Hero ── */
+  .hero__img { height: 280px; }
+  .hero__img--tall { height: 320px; }
+  .hero__content { left: 20px; right: 20px; bottom: 20px; }
+  .hero__title { font-size: 32px; }
+  .hero__title--plague { font-size: 44px; }
+
+  /* ── Drop cap ── */
+  .drop-cap-section { padding: 40px 0; }
+  .drop-cap-section p { font-size: 18px; }
+  .drop-cap-section p::first-letter { font-size: 60px; }
+  .drop-cap-section--plague p::first-letter { font-size: 64px; }
+
+  /* ── Featured game ── */
+  .featured-game {
+    padding: 32px 24px;
+    margin-bottom: 48px;
+  }
+  .featured-game__badge {
+    left: 24px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+  .featured-game__title { font-size: 30px; }
+  .featured-game__desc { font-size: 16px; }
+
+  .btn { padding: 14px 24px; font-size: 12px; letter-spacing: 0.18em; }
+  .btn--primary,
+  .btn--inverse { box-shadow: 3px 3px 0 var(--dark-bg); }
+  .btn-row { gap: 12px; }
+
+  /* ── Cards / pillars / lessons ── */
+  .card-grid { grid-template-columns: 1fr; gap: 20px; }
+  .card { padding: 24px; }
+  .card__title { font-size: 24px; }
+
+  .pillars { grid-template-columns: 1fr; }
+  .pillar {
+    border-right: none;
+    border-bottom: 2px solid var(--dark-bg);
+  }
+  .pillar:last-child {
+    border-bottom: none;
+    border-top: none;
+  }
+  .pillar__title { font-size: 24px; }
+
+  .dark-section {
+    padding: 32px 24px;
+    margin-bottom: 48px;
+    gap: 32px;
+  }
+  .dark-section__title { font-size: 28px; }
+  .dark-section__body { font-size: 15px; }
+
+  .game-dl__val { font-size: 16px; }
+
+  .lesson {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
+  }
+  .lesson__meta,
+  .lesson .btn--download { grid-column: 1; }
+  .lesson__title { font-size: 22px; }
+
+  /* ── Page sections ── */
+  .page-title { font-size: 36px; }
+  .page-intro { font-size: 17px; }
+  .page-subtitle { font-size: 16px; }
+
+  .about-inner,
+  .bib-inner,
+  .games-inner,
+  .pedagogy-inner { padding: 40px 0; }
+
+  .about-section { margin-top: 32px; padding-top: 24px; }
+  .about-section__body { font-size: 16px; }
+
+  .bib-entry__text { font-size: 15px; }
+
+  /* ── Banner / period ── */
+  .banner-img { height: 120px; margin-bottom: 48px; }
+  .period-block { margin-bottom: 40px; }
+  .period-block__caption-bar { padding: 12px 16px; }
+
+  /* ── Footer ── */
+  .site-footer { margin-top: 56px; }
+  .site-footer__inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (≤ 400px)
+   ============================================================ */
+@media (max-width: 400px) {
+  .hero__title { font-size: 28px; }
+  .hero__title--plague { font-size: 36px; }
+  .featured-game__title { font-size: 26px; }
+  .page-title { font-size: 30px; }
+  .brand__name { font-size: 16px; }
 }
