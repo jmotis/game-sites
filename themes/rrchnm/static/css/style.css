@@ -487,6 +487,11 @@ body {
    ============================================================ */
 .card-section { padding-bottom: 32px; }
 
+/* Hub home ends with a .card-section directly inside .page-body — bump
+   its bottom padding to match the 56px end-of-content gap used on the
+   plague and shipping home pages (where .period-block supplies it). */
+.page-body > .card-section:last-child { padding-bottom: 56px; }
+
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -654,7 +659,7 @@ body {
    ABOUT PAGE
    ============================================================ */
 .about-inner {
-  padding: 64px 0;
+  padding: 64px 0 56px;
   max-width: 880px;
   margin: 0 auto;
 }
@@ -722,7 +727,7 @@ body {
    BIBLIOGRAPHY PAGE
    ============================================================ */
 .bib-inner {
-  padding: 64px 0;
+  padding: 64px 0 56px;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -772,7 +777,14 @@ body {
    GAMES LIST PAGE (hub)
    ============================================================ */
 .games-inner {
-  padding: 64px 0;
+  padding: 64px 0 56px;
+}
+
+/* Trailing card-section's own padding-bottom would compound with
+   .games-inner's, so zero it out — .games-inner alone supplies the
+   56px bottom gap before the footer. */
+.games-inner > .card-section:last-child {
+  padding-bottom: 0;
 }
 
 .games-list {
@@ -784,7 +796,7 @@ body {
    PEDAGOGICAL MATERIALS PAGE
    ============================================================ */
 .pedagogy-inner {
-  padding: 64px 0;
+  padding: 64px 0 56px;
   max-width: 1080px;
   margin: 0 auto;
 }
