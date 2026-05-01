@@ -1,0 +1,16 @@
+{{/* Usage: {{ partial "orn-rule.html" (dict "label" "In Development" "site" .Site) }} */}}
+<div class="orn-rule" aria-hidden="true">
+  <div class="orn-rule__line"></div>
+  <svg width="36" height="14" viewBox="0 0 36 14">
+    <circle cx="18" cy="7" r="3"   fill="{{ .site.Params.primary }}" />
+    <circle cx="6"  cy="7" r="1.5" fill="{{ .site.Params.primary }}" />
+    <circle cx="30" cy="7" r="1.5" fill="{{ .site.Params.primary }}" />
+  </svg>
+  <span>{{ .label }}</span>
+  <svg width="36" height="14" viewBox="0 0 36 14">
+    <circle cx="18" cy="7" r="3"   fill="{{ .site.Params.primary }}" />
+    <circle cx="6"  cy="7" r="1.5" fill="{{ .site.Params.primary }}" />
+    <circle cx="30" cy="7" r="1.5" fill="{{ .site.Params.primary }}" />
+  </svg>
+  <div class="orn-rule__line"></div>
+</div>

@@ -1,0 +1,102 @@
+{{ define "main" }}
+{{- $details := .Site.Data.game_details -}}
+
+{{/* ── Hero ── */}}
+<section class="hero" aria-label="Site hero">
+  <img class="hero__img hero__img--tall"
+       src="{{ "images/lord-have-mercy.jpg" | relURL }}"
+       alt="Lord, have mercy on London — broadside, c. 1636" />
+  <div class="hero__gradient hero__gradient--dark" aria-hidden="true"></div>
+  <div class="hero__content hero__content--plague">
+    <h1 class="hero__title hero__title--plague">
+      Can you survive<br />
+      <span class="hero__title-accent">1665</span>?
+    </h1>
+  </div>
+</section>
+
+{{/* ── CTA bar (below hero) ── */}}
+<div class="cta-bar">
+  <div class="cta-bar__inner">
+    <a href="/game/" class="btn btn--primary">Play the Game →</a>
+    <a href="/pedagogical-materials/" class="btn btn--primary">For Teachers →</a>
+  </div>
+</div>
+
+<div class="page-body">
+
+  {{/* ── Intro with drop cap ── */}}
+  <div class="drop-cap-section">
+    <div class="drop-cap-section--plague">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{/* ── Runaways image block ── */}}
+  <div class="period-block">
+    <div class="hist-img" style="height: 300px;">
+      <img src="{{ "images/runaways-fleeing.jpg" | relURL }}"
+           alt="Runaways fleeing from the plague, English popular print"
+           style="height: 300px;" />
+    </div>
+    <div class="period-block__caption-bar">
+      <p class="period-block__title">"Runaways fleeing from the Plague"</p>
+      <p class="period-block__source">English popular print · Wellcome Collection</p>
+    </div>
+  </div>
+
+  {{/* ── Inside the Game ── */}}
+  {{ partial "orn-rule.html" (dict "label" "Inside the Game" "site" .Site) }}
+
+  <div class="pillars" role="list">
+    <div class="pillar" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Reputation</h2>
+      <p class="pillar__desc">Of good credit and quality — or reduced to begging the parish?</p>
+    </div>
+    <div class="pillar pillar--alt" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Household</h2>
+      <p class="pillar__desc">Family, servants, and lodgers. Each soul is an obligation.</p>
+    </div>
+    <div class="pillar" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Apothecary</h2>
+      <p class="pillar__desc">Plague waters and posies. The bills are real even if the cures aren't.</p>
+    </div>
+  </div>
+
+  {{/* ── London Bridge banner ── */}}
+  <div class="banner-img">
+    <img src="{{ "images/london-bridge.jpg" | relURL }}"
+         alt="Claude de Jongh, View of Old London Bridge, c. 1632" />
+    <p class="banner-img__caption">
+      Claude de Jongh, <em>View of Old London Bridge</em>, c. 1632 — the city as the game's Londoners would have known it.
+    </p>
+  </div>
+
+  {{/* ── Teach with the game ── */}}
+  <div class="dark-section">
+    <div>
+      <p class="dark-section__eyebrow">For Teachers</p>
+      <h2 class="dark-section__title">Teach with the game.</h2>
+      <p class="dark-section__body">
+        Free, classroom-tested resources designed to be used before, during, and after gameplay.
+        Aligned to C3 Framework standards.
+      </p>
+      <a href="/pedagogical-materials/" class="btn btn--primary" style="box-shadow: 4px 4px 0 #FFFDF8;">
+        Pedagogical Materials →
+      </a>
+    </div>
+    <dl class="game-dl">
+      {{- range $details }}
+      <div class="game-dl__row">
+        <dt class="game-dl__key">{{ .key }}</dt>
+        <dd class="game-dl__val">{{ .value }}</dd>
+      </div>
+      {{- end }}
+    </dl>
+  </div>
+
+</div>
+{{ end }}

@@ -1,0 +1,5 @@
+name = "RRCHNM"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Shared Hugo theme for RRCHNM games sites — Direction D design (Broadside + editorial header)."
+min_version = "0.100.0"

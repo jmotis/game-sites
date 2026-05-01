@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{- $entries := .Site.Data.bibliography -}}
+
+<div class="page-body">
+  <div class="bib-inner">
+    <h1 class="page-title">{{ .Title }}</h1>
+
+    <ul class="bib-list" aria-label="Bibliography">
+      {{- range $entries }}
+      <li class="bib-entry">
+        <p class="bib-entry__text">
+          <span class="bib-entry__author">{{ .author }}</span>
+          {{" "}}<em>{{ .title }}</em>
+          {{" "}}<span class="bib-entry__place">{{ .place }}</span>
+        </p>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

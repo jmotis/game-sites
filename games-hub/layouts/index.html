@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{- $feat  := .Site.Data.featured_game -}}
+{{- $inDev := .Site.Data.in_development -}}
+
+{{/* ── Hero ── */}}
+<section class="hero" aria-label="Site hero">
+  <img class="hero__img"
+       src="{{ "images/london-bridge.jpg" | relURL }}"
+       alt="Claude de Jongh, View of London Bridge, c. 1632" />
+  <div class="hero__gradient" aria-hidden="true"></div>
+  <div class="hero__content">
+    <h1 class="hero__title">Historical games,<br />made for teaching.</h1>
+  </div>
+</section>
+
+<div class="page-body">
+
+  {{/* ── Intro with drop cap ── */}}
+  <div class="drop-cap-section">
+    {{ .Content }}
+  </div>
+
+  {{/* ── Featured Game ── */}}
+  <div class="featured-game">
+    <div class="featured-game__badge">★ Featured Game</div>
+    <div class="featured-game__grid">
+      <div>
+        <h2 class="featured-game__title">{{ $feat.title }}</h2>
+        <p class="featured-game__meta">{{ $feat.subtitle }}</p>
+        <p class="featured-game__desc">{{ $feat.description }}</p>
+        <a href="{{ $feat.url }}" class="btn btn--inverse">Visit the game →</a>
+      </div>
+      <div>
+        <div class="hist-img" style="height: 280px;">
+          <img src="{{ "images/lord-have-mercy.jpg" | relURL }}"
+               alt="{{ $feat.image_alt }}"
+               style="height: 280px;" />
+        </div>
+        <p class="featured-game__img-caption">{{ $feat.image_caption | safeHTML }}</p>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── In Development ── */}}
+  <div class="card-section">
+    {{ partial "orn-rule.html" (dict "label" "In Development" "site" .Site) }}
+    <div class="card-grid">
+      {{- range $inDev }}
+      <div class="card">
+        <p class="card__meta">{{ .meta }}</p>
+        <h3 class="card__title">{{ .title }}</h3>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+
+</div>
+{{ end }}

@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{- $lessons := .Site.Data.lessons -}}
+
+<div class="page-body">
+  <div class="pedagogy-inner">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="page-subtitle">Free, classroom-tested resources for use before, during, and after gameplay.</p>
+
+    <div class="lessons" role="list">
+      {{- range $i, $lesson := $lessons }}
+      <div class="lesson{{ if eq (mod $i 2) 1 }} lesson--alt{{ end }}" role="listitem">
+        <div>
+          <h2 class="lesson__title">{{ .title }}</h2>
+          <p class="lesson__desc">{{ .description }}</p>
+        </div>
+        <p class="lesson__meta">{{ .meta }}</p>
+        <a href="{{ .url }}" class="btn btn--download">Download</a>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</div>
+{{ end }}
