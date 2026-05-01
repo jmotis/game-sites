@@ -677,6 +677,12 @@ body {
   color: #3A3530;
 }
 
+.page-rule {
+  border: 0;
+  border-top: 1px solid var(--dark-bg);
+  margin: 56px 0 32px;
+}
+
 .about-section {
   margin-top: 48px;
   padding-top: 32px;
