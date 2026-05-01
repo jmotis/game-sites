@@ -678,9 +678,15 @@ body {
 }
 
 .page-rule {
+  display: block;
   border: 0;
   border-top: 1px solid var(--dark-bg);
-  margin: 56px 0 32px;
+  height: 0;
+  /* Generous gap on both sides — the colored .featured-game block that
+     follows on the games page has heavy visual weight, and the smaller
+     gaps that read airy on the text-only bibliography / about pages
+     read cramped against it. */
+  margin: 80px 0 56px;
 }
 
 .about-section {
