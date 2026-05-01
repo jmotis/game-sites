@@ -700,11 +700,8 @@ body {
 
 .bib-entry {
   padding: 20px 0 20px 28px;
-  border-bottom: 1px solid var(--dark-bg);
   position: relative;
 }
-
-.bib-entry:last-child { border-bottom: none; }
 
 .bib-entry::before {
   content: '';
