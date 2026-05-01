@@ -1,3 +1,11 @@
+- title:       "Adventures in Illuminating"
+  subtitle:    "France · 13th Century · MS / HS / Undergrad"
+  description: "Learn about medieval book production. Can you create an illuminated Book of Hours on time and in budget for your noble patron?"
+  url:         "https://jmotis.github.io/Adventures-in-Illuminating.html"
+  image:       "adventures-in-illuminating.png"
+  image_alt:   "Adventures in Illuminating — open illuminated manuscript depicting an Annunciation scene"
+  cover:       true
+
 - title:       "Gaming the Great Plague"
   subtitle:    "England · 17th Century · MS / HS / Undergrad"
   description: "Explore the world of 1664–66 London. Can you and your household survive war, plague, and fire?"
@@ -8,11 +16,3 @@
   image_alt:     "Gaming the Great Plague — woodcut-style illustration of a skeleton with arrows standing astride three coffins"
   cover:         true
   featured:      true
-
-- title:       "Adventures in Illuminating"
-  subtitle:    "Paris · 13th Century · MS / HS / Undergrad"
-  description: "Learn about medieval book production. Can you create an illuminated Book of Hours on time and in budget for your noble patron?"
-  url:         "https://jmotis.github.io/Adventures-in-Illuminating.html"
-  image:       "adventures-in-illuminating.png"
-  image_alt:   "Adventures in Illuminating — open illuminated manuscript depicting an Annunciation scene"
-  cover:       true
