@@ -22,7 +22,12 @@
             {{- with $game.description }}
             <p class="featured-game__desc">{{ . }}</p>
             {{- end }}
-            <a href="{{ $game.url }}" class="btn btn--inverse">Play the Game →</a>
+            <div class="btn-row">
+              <a href="{{ $game.url }}" class="btn btn--inverse">Play the Game →</a>
+              {{- with $game.teachers_url }}
+              <a href="{{ . }}" class="btn btn--inverse">For Teachers →</a>
+              {{- end }}
+            </div>
           </div>
           {{- with $game.image }}
           <div>

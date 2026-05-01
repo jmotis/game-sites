@@ -2,6 +2,8 @@
   subtitle:    "England · 17th Century · MS / HS / Undergrad"
   description: "Explore the world of 1664–66 London. Can you and your household survive war, plague, and fire?"
   url:           "https://jmotis.github.io/GamingtheGreatPlague"
+  # TODO: swap to https://1665plague.rrchnm.org/pedagogical-materials/ at production deploy
+  teachers_url:  "https://jmotis.github.io/game-sites/plague/pedagogical-materials/"
   image:         "gaming-the-great-plague.jpg"
   image_alt:     "Gaming the Great Plague — woodcut-style illustration of a skeleton with arrows standing astride three coffins"
   cover:         true
