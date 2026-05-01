@@ -694,7 +694,7 @@ body {
 
 .bib-list {
   margin: 56px 0 0;
-  border-top: 3px double var(--dark-bg);
+  border-top: 1px solid var(--dark-bg);
   border-bottom: 1px solid var(--dark-bg);
 }
 

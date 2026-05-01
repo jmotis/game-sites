@@ -6,7 +6,7 @@ theme         = "rrchnm"
 
 [params]
   siteName     = "RRCHNM Games"
-  tagline      = "Learning History Through Play"
+  tagline      = "Learning History is Fun"
   primary      = "#C32A26"
   primaryDark  = "#A02220"
   primaryDeep  = "#761815"
