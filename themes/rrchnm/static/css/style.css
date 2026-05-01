@@ -318,6 +318,15 @@ body {
   filter: sepia(0.18) contrast(1.05);
 }
 
+/* Game cover art: no sepia, no crop. Letterboxes against the parent block. */
+.hist-img--cover {
+  background: transparent;
+}
+.hist-img--cover img {
+  filter: none;
+  object-fit: contain;
+}
+
 /* ============================================================
    FEATURED GAME BLOCK (hub home)
    ============================================================ */
@@ -447,6 +456,14 @@ body {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
+}
+
+.card__desc {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3A3530;
+  font-family: var(--body);
 }
 
 /* ============================================================

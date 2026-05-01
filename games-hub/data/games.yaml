@@ -1,16 +1,16 @@
 - title:       "Gaming the Great Plague"
-  subtitle:    "Twine · 45–60 min · HS / Undergraduate"
-  description: >
-    A text-based adventure that asks students to navigate the 1665–66 plague
-    outbreak in London — managing reputation, household, apothecary visits,
-    and disposable income.
+  subtitle:    "England · 17th Century · MS / HS / Undergrad"
+  description: "Explore the world of 1664–66 London. Can you and your household survive war, plague, and fire?"
   url:           "https://jmotis.github.io/GamingtheGreatPlague"
-  image:         "lord-have-mercy.jpg"
-  image_alt:     "Lord, have mercy on London — broadside, c. 1636"
-  image_caption: "<em>Lord, haue mercy on London</em>, broadside, c. 1636."
+  image:         "gaming-the-great-plague.png"
+  image_alt:     "Gaming the Great Plague — woodcut-style illustration of a skeleton with arrows standing astride three coffins"
+  cover:         true
   featured:      true
 
-# TODO: subtitle, description, image — fill in when available
 - title:       "Adventures in Illuminating"
-  description: "Coming soon — description, audience, and runtime to follow."
+  subtitle:    "Paris · 13th Century · MS / HS / Undergrad"
+  description: "Learn about medieval book production. Can you create an illuminated Book of Hours on time and in budget for your noble patron?"
   url:         "https://jmotis.github.io/Adventures-in-Illuminating.html"
+  image:       "adventures-in-illuminating.png"
+  image_alt:   "Adventures in Illuminating — open illuminated manuscript depicting an Annunciation scene"
+  cover:       true

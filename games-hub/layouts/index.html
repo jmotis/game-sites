@@ -28,15 +28,17 @@
         <h2 class="featured-game__title">{{ $feat.title }}</h2>
         <p class="featured-game__meta">{{ $feat.subtitle }}</p>
         <p class="featured-game__desc">{{ $feat.description }}</p>
-        <a href="{{ $feat.url }}" class="btn btn--inverse">Visit the game →</a>
+        <a href="{{ $feat.url }}" class="btn btn--inverse">Play the Game →</a>
       </div>
       <div>
-        <div class="hist-img" style="height: 280px;">
+        <div class="hist-img{{ if $feat.cover }} hist-img--cover{{ end }}" style="height: 280px;">
           <img src="{{ printf "images/%s" $feat.image | relURL }}"
                alt="{{ $feat.image_alt }}"
                style="height: 280px;" />
         </div>
-        <p class="featured-game__img-caption">{{ $feat.image_caption | safeHTML }}</p>
+        {{- with $feat.image_caption }}
+        <p class="featured-game__img-caption">{{ . | safeHTML }}</p>
+        {{- end }}
       </div>
     </div>
   </div>
@@ -47,8 +49,13 @@
     <div class="card-grid">
       {{- range $inDev }}
       <div class="card">
-        <p class="card__meta">{{ .meta }}</p>
+        {{- with .subtitle }}
+        <p class="card__meta">{{ . }}</p>
+        {{- end }}
         <h3 class="card__title">{{ .title }}</h3>
+        {{- with .description }}
+        <p class="card__desc">{{ . }}</p>
+        {{- end }}
       </div>
       {{- end }}
     </div>

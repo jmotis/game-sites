@@ -22,11 +22,11 @@
             {{- with $game.description }}
             <p class="featured-game__desc">{{ . }}</p>
             {{- end }}
-            <a href="{{ $game.url }}" class="btn btn--inverse">Visit the game →</a>
+            <a href="{{ $game.url }}" class="btn btn--inverse">Play the Game →</a>
           </div>
           {{- with $game.image }}
           <div>
-            <div class="hist-img" style="height: 280px;">
+            <div class="hist-img{{ if $game.cover }} hist-img--cover{{ end }}" style="height: 280px;">
               <img src="{{ printf "images/%s" . | relURL }}"
                    alt="{{ $game.image_alt }}"
                    style="height: 280px;" />
@@ -47,8 +47,13 @@
       <div class="card-grid">
         {{- range $inDev }}
         <div class="card">
-          <p class="card__meta">{{ .meta }}</p>
+          {{- with .subtitle }}
+          <p class="card__meta">{{ . }}</p>
+          {{- end }}
           <h3 class="card__title">{{ .title }}</h3>
+          {{- with .description }}
+          <p class="card__desc">{{ . }}</p>
+          {{- end }}
         </div>
         {{- end }}
       </div>
