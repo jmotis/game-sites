@@ -107,7 +107,7 @@ Output goes to each site's `public/` (gitignored). The GitHub Actions workflow d
 │   ├── layouts/
 │   │   ├── index.html              Home (hero, CTA bar, drop cap, pillars, dark "Teach")
 │   │   └── pedagogical-materials/list.html
-│   └── static/images/              lord-have-mercy, runaways-fleeing, london-bridge
+│   └── static/images/              lord-have-mercy (hero), runaways-fleeing (closing)
 │
 ├── landing/                        Root index for the GitHub Pages preview
 │   └── index.html                  Two-card preview at jmotis.github.io/game-sites/
@@ -192,6 +192,16 @@ The Hub and Plague Abouts share the same template and identical content. Edit **
 
 Suppose you want a dedicated site for *Adventures in Illuminating* (like `plague-site/` is for the plague game), to live at e.g. `illuminating.rrchnm.org`.
 
+**Standard subsite home-page layout.** Every game subsite home page follows the same six-section order, with images only at the top and bottom:
+
+1. Hero (full-bleed image + dark gradient + title)
+2. CTA bar (Play the Game / For Teachers buttons)
+3. Drop-cap intro paragraph (from `content/_index.md`)
+4. "Inside the Game" ornamental divider
+5. Three pillar callouts
+6. Closing period image (`.period-block` with caption bar)
+
+
 1. **Create the directory and copy the structure.** Easiest is to copy `plague-site/` as a template:
    ```bash
    cp -r plague-site illuminating-site
@@ -202,7 +212,7 @@ Suppose you want a dedicated site for *Adventures in Illuminating* (like `plague
    - `[params].primary` → site's accent color (and the related `primaryDark`/`primaryDeep`/`primarySoft` shades for AA contrast)
    - `[[menus.main]]` items → home, game URL, pedagogical-materials, about
 3. **Replace content & data.** Edit each file under `content/` and `data/`. Most copy carries over (about sections especially); update home prose, game details, lessons.
-4. **Drop in the new site's hero/period images** at `illuminating-site/static/images/`. The existing layout expects `lord-have-mercy.jpg`, `runaways-fleeing.jpg`, `london-bridge.jpg` — either rename your images to those filenames *or* edit `layouts/index.html` to point at the new ones.
+4. **Drop in the new site's two images** at `illuminating-site/static/images/`. The standard subsite home page uses exactly two images: a full-bleed **hero** at the top and a **closing period image** at the bottom (rendered as a `.period-block` with caption bar). Edit `layouts/index.html` to point at your filenames, or rename your files to match the existing layout. There are no mid-page images on the home page.
 5. **Hook it into the build & landing page:**
    - In `.github/workflows/deploy.yml`, add a third "Build" step modeled on the existing two:
      ```yaml
