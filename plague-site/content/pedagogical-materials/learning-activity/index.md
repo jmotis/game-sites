@@ -20,7 +20,7 @@ The activity is appropriate for a grade 6 to 9 World History class, but the sour
 ## Procedure
 
 1. Inform students that they will be analyzing primary sources related to health and medicine. Specifically these are remedies for treating the plague that were used in England in the 1660s.
-2. Place students in pairs or small groups and pass out the source excerpts below under **Primary Sources**.
+2. Place students in pairs or small groups and pass out the source excerpts below under [**Primary Sources**](#primary-sources).
 3. Students examine the sources carefully to determine what the remedies were and how they were administered. For some classes, the instructor may want to read the sources aloud to students. The language is older and not all words are spelled the same as today.
 4. After examining the sources, have students answer the following questions — first together with their partner, and then sharing their ideas with the class:
     - What remedies are listed in these sources? How were they made? How were they taken by the patient?
@@ -42,7 +42,7 @@ The first Appearance and signes are, that if you feel yourself trouble with the 
 
 {{< relimg src="TheCure.png" alt="Excerpt from Thomas Cocke's 1665 pamphlet Advice for the Poor by Way of Cure & Caution" >}}
 
-### Transcript: Advice for the Poor
+### Transcript: The CURE God Permitting.
 
 FOr all Persons so soon as they find themselves ill or infected, (Excepting the very Aged and Consumptive) is imediately to (1) Vomit, especially if Repletion, or any Surfeit was the cause, or they find any inclination to it: In this case don't dispute it but imediately (2) Vomit, with a Draught of warm water, and 2 or three spoonfuls of Salt dissolved in it, using the Finger or a Feather, dipt in Oyl to provoke it, if it come not away presently.
 

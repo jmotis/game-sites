@@ -10,7 +10,7 @@ pdf: "PlagueGameOrganizer-Worksheet.pdf"
 
 Complete for each playthrough of the game.
 
-Date and time game started: ____________________
+Date and time game started:
 
 ## Your Identity
 
