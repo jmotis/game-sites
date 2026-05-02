@@ -97,7 +97,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #F4EFE6;
+  color: #A8A095;
   font-weight: 600;
   margin-top: 5px;
 }
@@ -1011,7 +1011,7 @@ body {
   margin: 0 auto;
   font-family: var(--sans);
   font-size: 11px;
-  color: #F4EFE6;
+  color: #969080;
   display: flex;
   justify-content: space-between;
   align-items: center;
