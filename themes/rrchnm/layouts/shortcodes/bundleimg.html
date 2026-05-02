@@ -1,0 +1,20 @@
+{{- /*
+  bundleimg — image whose src must match a page-bundle resource (a file
+  next to the page's index.md). Hugo's resource lookup gives us a
+  URL that works under any baseURL automatically.
+
+  Usage in markdown:
+    {{< bundleimg src="Belson.png" alt="..." >}}
+
+  Errors loudly if no resource matches, so a typo or missing asset
+  fails the build instead of silently rendering a broken image.
+*/ -}}
+{{- $src      := .Get "src" -}}
+{{- $alt      := .Get "alt" -}}
+{{- $class    := .Get "class" -}}
+{{- $resource := .Page.Resources.GetMatch $src -}}
+{{- if $resource -}}
+<img src="{{ $resource.RelPermalink }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} />
+{{- else -}}
+{{- errorf "bundleimg: no page-bundle resource named %q on page %q" $src .Page.RelPermalink -}}
+{{- end -}}
