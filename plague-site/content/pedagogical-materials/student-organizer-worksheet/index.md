@@ -22,7 +22,10 @@ Date and time game started:
 - **Religion:** Church of England · Dissident Protestant · Catholic
 - **Status:** Beggar · Day Labourer · Servant · Artisan · Merchant · Noble
 - **Location:** Inside city walls · Western suburbs (Westminster) · Western suburbs (other) · Northern suburbs · Eastern suburbs · Across the river in the southern suburbs
-- **Household:** number of adults · number of children · number of servants
+- **Household:**
+    - Number of adults:
+    - Number of children:
+    - Number of servants:
 
 ## After Completing the Game
 
@@ -35,10 +38,4 @@ Date and time game started:
 
 Now think about the decisions you made while playing the game as your character.
 
-### Top 3 Important Decisions
-
-For each, note **what** the decision was and **why** you think it mattered.
-
-### Summary
-
-In 2&ndash;3 sentences, summarize your character's story.
+### What were your 3 most important decisions? What was the decision and why do you think it mattered?
