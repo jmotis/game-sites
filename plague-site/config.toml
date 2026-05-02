@@ -20,7 +20,7 @@ theme         = "rrchnm"
 
 [[menus.main]]
   name   = "Game"
-  url    = "https://jmotis.github.io/GamingtheGreatPlague"
+  url    = "/game/"
   weight = 2
 
 [[menus.main]]
