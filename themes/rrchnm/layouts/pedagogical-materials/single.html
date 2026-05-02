@@ -4,14 +4,14 @@
   {{- $pdf = $.Resources.GetMatch . -}}
 {{- end -}}
 <div class="page-body">
-  <article class="pedagogy-single">
-    <header class="pedagogy-single__header">
+  <article class="article-page">
+    <header class="article-page__header">
       <h1 class="page-title">{{ .Title }}</h1>
       {{- with .Description }}
       <p class="page-intro">{{ . | safeHTML }}</p>
       {{- end }}
       {{- with $pdf }}
-      <p class="pedagogy-single__pdf">
+      <p class="article-page__pdf">
         <a href="{{ .RelPermalink }}" class="btn btn--download" download>Download PDF</a>
       </p>
       {{- end }}
@@ -19,7 +19,7 @@
 
     <hr class="page-rule" />
 
-    <div class="pedagogy-single__body">
+    <div class="article-page__body">
       {{ .Content }}
     </div>
   </article>
