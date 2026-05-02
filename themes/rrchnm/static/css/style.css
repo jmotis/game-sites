@@ -847,24 +847,6 @@ body {
 }
 
 /* ============================================================
-   EMBEDDED GAME (iframe — plague-site /game/)
-   ============================================================ */
-.game-embed {
-  margin-top: 32px;
-}
-
-.game-embed__frame {
-  display: block;
-  width: 100%;
-  /* Tall enough to be playable while leaving the header visible.
-     min-height keeps it sensible on short viewports. */
-  height: calc(100vh - 220px);
-  min-height: 600px;
-  border: 2px solid var(--dark-bg);
-  background: var(--page-bg);
-}
-
-/* ============================================================
    SITE FOOTER
    ============================================================ */
 .site-footer {
