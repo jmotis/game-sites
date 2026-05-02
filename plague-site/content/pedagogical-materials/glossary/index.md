@@ -3,7 +3,7 @@ title: "Glossary"
 description: "Definitions of historical terms and concepts used in the game."
 weight: 3
 meta: "Reference · PDF available"
-pdf: "/pedagogy/glossary.pdf"
+pdf: "glossary.pdf"
 ---
 
 For now, you can use this glossary of terms used in the game.

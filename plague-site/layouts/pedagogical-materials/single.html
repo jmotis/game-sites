@@ -1,4 +1,8 @@
 {{ define "main" }}
+{{- $pdf := "" -}}
+{{- with .Params.pdf -}}
+  {{- $pdf = $.Resources.GetMatch . -}}
+{{- end -}}
 <div class="page-body">
   <article class="pedagogy-single">
     <header class="pedagogy-single__header">
@@ -6,9 +10,9 @@
       {{- with .Description }}
       <p class="page-intro">{{ . | safeHTML }}</p>
       {{- end }}
-      {{- with .Params.pdf }}
+      {{- with $pdf }}
       <p class="pedagogy-single__pdf">
-        <a href="{{ . | relURL }}" class="btn btn--download" download>Download PDF</a>
+        <a href="{{ .RelPermalink }}" class="btn btn--download" download>Download PDF</a>
       </p>
       {{- end }}
     </header>
