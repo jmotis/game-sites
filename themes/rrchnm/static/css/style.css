@@ -881,10 +881,10 @@ body {
    PEDAGOGY DETAIL PAGE (per-lesson article)
    ============================================================ */
 .pedagogy-single {
-  /* Match the .pedagogy-inner list page width so the View → click
-     doesn't visually jump in/out — and so the h1 has room to render
-     on a single line at the 60px page-title size. */
-  max-width: 1080px;
+  /* Standardised to the .bib-inner width (980px) for text-heavy
+     content pages. Three site-wide widths now: about-inner 880,
+     pedagogy-single / bib-inner 980, pedagogy-inner (list) 1080. */
+  max-width: 980px;
   margin: 0 auto;
   /* Match the 64px top gap between site header and h1 used by the
      bib-inner / about-inner / pedagogy-inner wrappers. */
