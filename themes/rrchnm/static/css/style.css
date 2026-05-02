@@ -909,10 +909,6 @@ body {
   font-size: 17px;
   line-height: 1.65;
   color: var(--dark-bg);
-  /* Constrain prose body to a comfortable reading measure even though
-     the surrounding article spans the full list-page width. */
-  max-width: 760px;
-  margin: 0 auto;
 }
 
 .pedagogy-single__body > * + * {
