@@ -1,0 +1,16 @@
+{{- /*
+  staticimg — image whose src is a path under static/ (e.g.
+  "images/foo.jpg"). Resolves via relURL so the URL works under both
+  production (root baseURL) and the GitHub Pages preview (subpath
+  baseURL).
+
+  Usage in markdown:
+    {{< staticimg src="images/foo.jpg" alt="..." >}}
+
+  Use bundleimg instead when the image lives next to the page in a
+  page bundle.
+*/ -}}
+{{- $src   := strings.TrimPrefix "/" (.Get "src") -}}
+{{- $alt   := .Get "alt" -}}
+{{- $class := .Get "class" -}}
+<img src="{{ $src | relURL }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} />

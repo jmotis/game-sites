@@ -878,12 +878,12 @@ body {
 }
 
 /* ============================================================
-   PEDAGOGY DETAIL PAGE (per-lesson article)
+   ARTICLE / DETAIL PAGE (prose-style content with optional PDF)
    ============================================================ */
-.pedagogy-single {
+.article-page {
   /* Standardised to the .bib-inner width (980px) for text-heavy
-     content pages. Three site-wide widths now: about-inner 880,
-     pedagogy-single / bib-inner 980, pedagogy-inner (list) 1080. */
+     content pages. Three site-wide widths: about-inner 880,
+     bib-inner / article-page 980, pedagogy-inner (list) 1080. */
   max-width: 980px;
   margin: 0 auto;
   /* Match the 64px top gap between site header and h1 used by the
@@ -891,7 +891,7 @@ body {
   padding-top: 64px;
 }
 
-.pedagogy-single__pdf {
+.article-page__pdf {
   text-align: center;
   /* 56px above (gap from .page-intro to button) — paired with the
      .page-rule margin-top override below to centre the button between
@@ -901,21 +901,21 @@ body {
 
 /* Pull the page-rule closer than its 80px default so the Download PDF
    button sits visually centred between the subtitle and the rule. */
-.pedagogy-single .page-rule {
+.article-page .page-rule {
   margin: 56px 0 56px;
 }
 
-.pedagogy-single__body {
+.article-page__body {
   font-size: 17px;
   line-height: 1.65;
   color: var(--dark-bg);
 }
 
-.pedagogy-single__body > * + * {
+.article-page__body > * + * {
   margin-top: 18px;
 }
 
-.pedagogy-single__body h2 {
+.article-page__body h2 {
   font-family: var(--serif);
   font-size: 28px;
   font-weight: 700;
@@ -924,7 +924,7 @@ body {
   margin-bottom: 8px;
 }
 
-.pedagogy-single__body h3 {
+.article-page__body h3 {
   font-family: var(--serif);
   font-size: 22px;
   font-weight: 700;
@@ -933,45 +933,45 @@ body {
   margin-bottom: 4px;
 }
 
-.pedagogy-single__body p {
+.article-page__body p {
   margin-top: 16px;
 }
 
-.pedagogy-single__body strong {
+.article-page__body strong {
   font-weight: 700;
 }
 
-.pedagogy-single__body ol,
-.pedagogy-single__body ul {
+.article-page__body ol,
+.article-page__body ul {
   /* Override the global list-style: none reset for prose content. */
   list-style: revert;
   padding-left: 28px;
   margin-top: 16px;
 }
 
-.pedagogy-single__body ol ol,
-.pedagogy-single__body ol ul,
-.pedagogy-single__body ul ol,
-.pedagogy-single__body ul ul {
+.article-page__body ol ol,
+.article-page__body ol ul,
+.article-page__body ul ol,
+.article-page__body ul ul {
   margin-top: 8px;
 }
 
-.pedagogy-single__body li {
+.article-page__body li {
   margin-bottom: 8px;
 }
 
-.pedagogy-single__body li::marker {
+.article-page__body li::marker {
   color: var(--primary);
 }
 
-.pedagogy-single__body img {
+.article-page__body img {
   max-width: 100%;
   margin: 32px auto;
   border: 2px solid var(--dark-bg);
   background: var(--page-bg);
 }
 
-.pedagogy-single__body a {
+.article-page__body a {
   color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -979,18 +979,18 @@ body {
 }
 
 /* Glossary-style definition list */
-.pedagogy-single__body dl {
+.article-page__body dl {
   margin-top: 24px;
 }
 
-.pedagogy-single__body dt {
+.article-page__body dt {
   font-family: var(--serif);
   font-size: 19px;
   font-weight: 700;
   margin-top: 24px;
 }
 
-.pedagogy-single__body dd {
+.article-page__body dd {
   margin-left: 0;
   margin-top: 4px;
 }

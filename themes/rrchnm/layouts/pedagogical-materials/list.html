@@ -4,8 +4,11 @@
 <div class="page-body">
   <div class="pedagogy-inner">
     <h1 class="page-title">{{ .Title }}</h1>
-    <p class="page-subtitle">Free, classroom-tested resources for use before, during, and after gameplay.</p>
+    {{- with .Description }}
+    <p class="page-subtitle">{{ . }}</p>
+    {{- end }}
 
+    {{- if $lessons }}
     <div class="lessons" role="list">
       {{- range $i, $lesson := $lessons }}
       <div class="lesson{{ if eq (mod $i 2) 1 }} lesson--alt{{ end }}" role="listitem">
@@ -20,6 +23,7 @@
       </div>
       {{- end }}
     </div>
+    {{- end }}
   </div>
 </div>
 {{ end }}

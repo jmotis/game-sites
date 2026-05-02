@@ -32,7 +32,7 @@ The activity is appropriate for a grade 6 to 9 World History class, but the sour
 
 ## Primary Sources
 
-{{< relimg src="Belson.png" alt="Excerpt from John Belson's 1665 broadside Remedies Against the Infection of the Plague" >}}
+{{< bundleimg src="Belson.png" alt="Excerpt from John Belson's 1665 broadside Remedies Against the Infection of the Plague" >}}
 
 ### Transcript: A Cordial Tincture how to Cure the Plague
 
@@ -40,7 +40,7 @@ The first Appearance and signes are, that if you feel yourself trouble with the 
 
 *From John Belson, *Remedies Against the Infection of the Plague and the Curing Thereof, and Rules which are to be Observed Therein*, 1665.*
 
-{{< relimg src="TheCure.png" alt="Excerpt from Thomas Cocke's 1665 pamphlet Advice for the Poor by Way of Cure & Caution" >}}
+{{< bundleimg src="TheCure.png" alt="Excerpt from Thomas Cocke's 1665 pamphlet Advice for the Poor by Way of Cure & Caution" >}}
 
 ### Transcript: The CURE God Permitting.
 
