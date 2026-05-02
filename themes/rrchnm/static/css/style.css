@@ -95,10 +95,10 @@ body {
 .brand__tagline {
   font-family: var(--sans);
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #A8A095;
-  font-weight: 500;
+  color: #F4EFE6;
+  font-weight: 600;
   margin-top: 5px;
 }
 
@@ -108,7 +108,7 @@ body {
   gap: 28px;
   font-family: var(--sans);
   font-size: 12px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -436,7 +436,7 @@ body {
 .featured-game__meta {
   font-family: var(--sans);
   font-size: 12px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 12px;
@@ -508,7 +508,7 @@ body {
   font-family: var(--sans);
   font-size: 11px;
   color: var(--primary);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 8px;
@@ -872,7 +872,7 @@ body {
   font-family: var(--sans);
   font-size: 11px;
   color: #5A5648;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -1011,7 +1011,7 @@ body {
   margin: 0 auto;
   font-family: var(--sans);
   font-size: 11px;
-  color: #969080;
+  color: #F4EFE6;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1143,13 +1143,12 @@ body {
   .featured-game__badge {
     left: 24px;
     font-size: 10px;
-    letter-spacing: 0.18em;
   }
   .featured-game__title { font-size: 30px; }
   .featured-game__desc { font-size: 16px; }
   .hist-img--cover { width: 100%; max-width: 280px; }
 
-  .btn { padding: 14px 24px; font-size: 12px; letter-spacing: 0.18em; }
+  .btn { padding: 14px 24px; font-size: 12px; }
   .btn--primary,
   .btn--inverse { box-shadow: 3px 3px 0 var(--dark-bg); }
   .btn-row { gap: 12px; }
