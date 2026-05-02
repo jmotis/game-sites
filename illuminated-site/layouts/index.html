@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{/* ── Hero (image-less variant — pure colour block until period art is sourced) ── */}}
+<section class="hero" aria-label="Site hero">
+  <div class="hero__img hero__img--tall"
+       style="background: linear-gradient(180deg, var(--primary) 0%, var(--primary-deep) 100%);"
+       role="img"
+       aria-label="Olive-and-gold gradient placeholder"></div>
+  <div class="hero__gradient hero__gradient--dark" aria-hidden="true"></div>
+  <div class="hero__content hero__content--plague">
+    <h1 class="hero__title hero__title--plague">
+      Can you illuminate<br />
+      a Book of <span class="hero__title-accent">Hours</span>?
+    </h1>
+  </div>
+</section>
+
+{{/* ── CTA bar (below hero) ── */}}
+<div class="cta-bar">
+  <div class="cta-bar__inner">
+    <a href="https://jmotis.github.io/Adventures-in-Illuminating.html" class="btn btn--primary">Play the Game →</a>
+    <a href="{{ "pedagogical-materials/" | relURL }}" class="btn btn--primary">For Teachers →</a>
+  </div>
+</div>
+
+<div class="page-body">
+
+  {{/* ── Intro with drop cap ── */}}
+  <div class="drop-cap-section">
+    <div class="drop-cap-section--plague">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{/* ── Inside the Game ── */}}
+  {{ partial "orn-rule.html" (dict "label" "Inside the Game" "site" .Site) }}
+
+  <div class="pillars" role="list">
+    <div class="pillar" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Patronage</h2>
+      <p class="pillar__desc">A noble has commissioned a Book of Hours. Meeting their expectations is the whole job.</p>
+    </div>
+    <div class="pillar pillar--alt" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Materials</h2>
+      <p class="pillar__desc">Parchment, gold leaf, lapis lazuli. Every pigment has a price and a provenance.</p>
+    </div>
+    <div class="pillar" role="listitem">
+      <div class="pillar__accent" aria-hidden="true"></div>
+      <h2 class="pillar__title">Craft</h2>
+      <p class="pillar__desc">Scribes, illuminators, and the long quiet hours of the scriptorium.</p>
+    </div>
+  </div>
+
+</div>
+{{ end }}

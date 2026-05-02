@@ -68,6 +68,15 @@ jobs:
             --destination "${GITHUB_WORKSPACE}/public/shipping" \
             --baseURL "${{ steps.pages.outputs.base_url }}/shipping/"
 
+      - name: Build illuminated-site → public/illuminated/
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo --gc --minify \
+            --source illuminated-site \
+            --destination "${GITHUB_WORKSPACE}/public/illuminated" \
+            --baseURL "${{ steps.pages.outputs.base_url }}/illuminated/"
+
       - name: Add landing page → public/index.html
         run: cp landing/index.html public/index.html
 

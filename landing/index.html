@@ -38,10 +38,9 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 32px;
     }
-    @media (max-width: 980px) { .grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
     .card {
       display: block;
@@ -62,7 +61,8 @@
     }
     .card--hub      { background: #C32A26; }
     .card--plague   { background: #008285; }
-    .card--shipping { background: #004F71; }
+    .card--shipping    { background: #004F71; }
+    .card--illuminated { background: #8B6F1F; }
     .card__eyebrow {
       font-family: 'Figtree', sans-serif;
       font-size: 11px;
@@ -107,7 +107,7 @@
 <body>
   <main class="wrap">
     <h1>RRCHNM Games — Preview</h1>
-    <p class="lede">Preview deployment of three Hugo sites built from a shared theme. Production targets are <code>games.rrchnm.org</code>, <code>1665plague.rrchnm.org</code>, and <code>1812shipping.rrchnm.org</code>.</p>
+    <p class="lede">Preview deployment of four Hugo sites built from a shared theme. Production targets are <code>games.rrchnm.org</code>, <code>1665plague.rrchnm.org</code>, <code>1812shipping.rrchnm.org</code>, and <code>illuminated.rrchnm.org</code>.</p>
 
     <div class="grid">
       <a class="card card--hub" href="hub/">
@@ -129,6 +129,13 @@
         <h2 class="card__title">Learning the Ropes</h2>
         <p class="card__url">1812shipping.rrchnm.org</p>
         <p class="card__cta">Take to the seas →</p>
+      </a>
+
+      <a class="card card--illuminated" href="illuminated/">
+        <p class="card__eyebrow">A Historical Game</p>
+        <h2 class="card__title">Adventures in Illuminating</h2>
+        <p class="card__url">illuminated.rrchnm.org</p>
+        <p class="card__cta">Enter the scriptorium →</p>
       </a>
     </div>
 

@@ -5,6 +5,7 @@ Hugo sites for RRCHNM games, sharing a single theme:
 - **`games-hub/`** → production target `games.rrchnm.org` — RRCHNM Red `#C32A26`
 - **`plague-site/`** → production target `1665plague.rrchnm.org` — GMU Teal `#008285` (Pantone 321C)
 - **`shipping-site/`** → production target `1812shipping.rrchnm.org` — GMU Navy `#004F71` (Pantone 653C)
+- **`illuminated-site/`** → production target `illuminated.rrchnm.org` — Manuscript Olive `#8B6F1F`
 - **`themes/rrchnm/`** — shared theme. The sites differ in colors, content, and which page layouts they override.
 
 Brand fonts: Figtree · Noto Serif · Open Sans (GMU brand stack).
@@ -17,6 +18,7 @@ Brand fonts: Figtree · Noto Serif · Open Sans (GMU brand stack).
   - Hub: <https://jmotis.github.io/game-sites/hub/>
   - Plague: <https://jmotis.github.io/game-sites/plague/>
   - Shipping (Learning the Ropes): <https://jmotis.github.io/game-sites/shipping/>
+  - Illuminated (Adventures in Illuminating): <https://jmotis.github.io/game-sites/illuminated/>
 - Plague Twine game (external): <https://jmotis.github.io/GamingtheGreatPlague>
 - Adventures in Illuminating Twine game (external): <https://jmotis.github.io/Adventures-in-Illuminating.html>
 
@@ -37,9 +39,10 @@ Verify: `hugo version` should print `v0.100+ … extended`.
 ### 2. Run a site
 
 ```bash
-cd games-hub     && hugo server          # → http://localhost:1313
-cd plague-site   && hugo server -p 1314  # → http://localhost:1314
-cd shipping-site && hugo server -p 1315  # → http://localhost:1315
+cd games-hub        && hugo server          # → http://localhost:1313
+cd plague-site      && hugo server -p 1314  # → http://localhost:1314
+cd shipping-site    && hugo server -p 1315  # → http://localhost:1315
+cd illuminated-site && hugo server -p 1316  # → http://localhost:1316
 ```
 
 `hugo server` watches files and live-reloads.
@@ -47,9 +50,10 @@ cd shipping-site && hugo server -p 1315  # → http://localhost:1315
 ### 3. Build for production
 
 ```bash
-cd games-hub     && hugo
-cd plague-site   && hugo
-cd shipping-site && hugo
+cd games-hub        && hugo
+cd plague-site      && hugo
+cd shipping-site    && hugo
+cd illuminated-site && hugo
 ```
 
 Output goes to each site's `public/` (gitignored). The GitHub Actions workflow does this for you on every push to `main`.
@@ -141,11 +145,25 @@ Output goes to each site's `public/` (gitignored). The GitHub Actions workflow d
 │   │                                closing period image)
 │   └── static/images/              harbour (hero), World-1812 (closing)
 │
+├── illuminated-site/               illuminated.rrchnm.org
+│   ├── config.toml                 Olive palette + primaryOnDark = "#FFC733"
+│   │                                (same dark-header rationale as shipping)
+│   ├── content/
+│   │   ├── _index.md
+│   │   ├── about/_index.md
+│   │   └── pedagogical-materials/_index.md  (no lesson bundles yet)
+│   ├── data/
+│   │   └── about_sections.yaml
+│   ├── layouts/
+│   │   └── index.html              Home (gradient hero placeholder, CTA bar,
+│   │                                drop cap, pillars; no closing image yet)
+│   └── static/images/              empty — drop hero / closing art when ready
+│
 ├── landing/                        Root index for the GitHub Pages preview
-│   └── index.html                  Three-card preview at jmotis.github.io/game-sites/
+│   └── index.html                  Four-card preview at jmotis.github.io/game-sites/
 │
 ├── .github/workflows/
-│   └── deploy.yml                  Builds all three sites & deploys to Pages
+│   └── deploy.yml                  Builds all four sites & deploys to Pages
 │
 └── .gitignore                      Excludes public/, resources/, .hugo_build.lock
 ```
@@ -211,7 +229,7 @@ Add or split sections by adding more top-level `- label:` blocks. Entries within
 
 ### Update About sections (per site)
 
-Each site has its own `data/about_sections.yaml` (`games-hub/`, `plague-site/`, `shipping-site/`). They were originally near-identical but the sites are expected to diverge over time as each game's project team and credits evolve. Edit per site as needed; no automatic sync.
+Each site has its own `data/about_sections.yaml` (`games-hub/`, `plague-site/`, `shipping-site/`, `illuminated-site/`). They were originally near-identical but the sites are expected to diverge over time as each game's project team and credits evolve. Edit per site as needed; no automatic sync.
 
 Each section: `label` (eyebrow, becomes an `<h2>`) + `body` (HTML allowed via `safeHTML`).
 
@@ -416,13 +434,13 @@ Don't substitute approximations — the brand wordmark, primary buttons, and per
 
 ### Per-site colour tokens
 
-| Token | Hub (RRCHNM Red) | Plague (GMU Teal) | Shipping (GMU Navy) |
-|---|---|---|---|
-| `--primary` | `#C32A26` | `#008285` | `#004F71` |
-| `--primary-dark` (AA on white) | `#A02220` | `#006568` | `#003B58` |
-| `--primary-deep` | `#761815` | `#00484A` | `#002A40` |
-| `--primary-soft` (subtle bg) | `#F7E7E6` | `#E5F1F1` | `#E5EDF2` |
-| `--primary-on-dark` (header surface) | inherits `--primary` | inherits `--primary` | `#FFC733` (gold) |
+| Token | Hub (Red) | Plague (Teal) | Shipping (Navy) | Illuminated (Olive) |
+|---|---|---|---|---|
+| `--primary` | `#C32A26` | `#008285` | `#004F71` | `#8B6F1F` |
+| `--primary-dark` (AA on white) | `#A02220` | `#006568` | `#003B58` | `#6F5818` |
+| `--primary-deep` | `#761815` | `#00484A` | `#002A40` | `#463710` |
+| `--primary-soft` (subtle bg) | `#F7E7E6` | `#E5F1F1` | `#E5EDF2` | `#F0E9D2` |
+| `--primary-on-dark` (header surface) | inherits `--primary` | inherits `--primary` | `#FFC733` (gold) | `#FFC733` (gold) |
 
 Shared across all sites: `--ink #1A1A1A`, `--deep #004F71`, `--page-bg #FFFDF8`, `--dark-bg #0F0E0C`.
 
@@ -487,8 +505,9 @@ Pushes to `main` trigger `.github/workflows/deploy.yml`. The workflow:
 2. Builds `games-hub/` with `--baseURL "<pages-base>/hub/"` → `public/hub/`.
 3. Builds `plague-site/` with `--baseURL "<pages-base>/plague/"` → `public/plague/`.
 4. Builds `shipping-site/` with `--baseURL "<pages-base>/shipping/"` → `public/shipping/`.
-5. Copies `landing/index.html` to `public/index.html`.
-6. Uploads & deploys the combined `public/` to GitHub Pages.
+5. Builds `illuminated-site/` with `--baseURL "<pages-base>/illuminated/"` → `public/illuminated/`.
+6. Copies `landing/index.html` to `public/index.html`.
+7. Uploads & deploys the combined `public/` to GitHub Pages.
 
 **One-time setup** (already done): repo Settings → Pages → Build and deployment → Source: **GitHub Actions** (not "Deploy from a branch").
 
@@ -527,7 +546,7 @@ If you want to continue this work in a new chat, here's what an AI assistant nee
 
 1. **Source of design intent.** The original prototypes from Claude Design (HTML/JSX in a separate handoff bundle) are *not* in this repo. They've been faithfully translated into the Hugo theme; the theme's CSS is now the source of truth for the design. Direction D was the chosen direction (Broadside-style body + editorial header).
 
-2. **Three sites, one theme.** Don't duplicate logic across `games-hub/`, `plague-site/`, and `shipping-site/` — most things belong in `themes/rrchnm/`. Site-level overrides exist only for layouts that genuinely differ (home pages, hub-specific list pages).
+2. **Four sites, one theme.** Don't duplicate logic across `games-hub/`, `plague-site/`, `shipping-site/`, and `illuminated-site/` — most things belong in `themes/rrchnm/`. Site-level overrides exist only for layouts that genuinely differ (home pages, hub-specific list pages).
 
 3. **Data-driven content.** Adding a game, in-dev card, bibliography entry, or about section is a YAML edit. Adding a lesson is a page-bundle edit (folder + index.md + assets). Resist the urge to hardcode content into layouts.
 
