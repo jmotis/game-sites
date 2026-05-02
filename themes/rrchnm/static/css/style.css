@@ -878,6 +878,129 @@ body {
 }
 
 /* ============================================================
+   PEDAGOGY DETAIL PAGE (per-lesson article)
+   ============================================================ */
+.pedagogy-single {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pedagogy-single__pdf {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.pedagogy-single__body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--dark-bg);
+}
+
+.pedagogy-single__body > * + * {
+  margin-top: 18px;
+}
+
+.pedagogy-single__body h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 48px;
+  margin-bottom: 8px;
+}
+
+.pedagogy-single__body h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+.pedagogy-single__body p {
+  margin-top: 16px;
+}
+
+.pedagogy-single__body strong {
+  font-weight: 700;
+}
+
+.pedagogy-single__body ol,
+.pedagogy-single__body ul {
+  /* Override the global list-style: none reset for prose content. */
+  list-style: revert;
+  padding-left: 28px;
+  margin-top: 16px;
+}
+
+.pedagogy-single__body ol ol,
+.pedagogy-single__body ol ul,
+.pedagogy-single__body ul ol,
+.pedagogy-single__body ul ul {
+  margin-top: 8px;
+}
+
+.pedagogy-single__body li {
+  margin-bottom: 8px;
+}
+
+.pedagogy-single__body li::marker {
+  color: var(--primary);
+}
+
+.pedagogy-single__body img {
+  max-width: 100%;
+  margin: 32px auto;
+  border: 2px solid var(--dark-bg);
+  background: var(--page-bg);
+}
+
+.pedagogy-single__body a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Glossary-style definition list */
+.pedagogy-single__body dl {
+  margin-top: 24px;
+}
+
+.pedagogy-single__body dt {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+.pedagogy-single__body dd {
+  margin-left: 0;
+  margin-top: 4px;
+}
+
+.pedagogy-single__back {
+  margin-top: 56px;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pedagogy-single__back a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.pedagogy-single__back a:hover,
+.pedagogy-single__back a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ============================================================
    SITE FOOTER
    ============================================================ */
 .site-footer {

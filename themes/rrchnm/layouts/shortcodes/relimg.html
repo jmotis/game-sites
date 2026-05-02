@@ -1,0 +1,9 @@
+{{- /*
+  relimg — image with a relURL-resolved src so paths work under both
+  production (root baseURL) and the GitHub Pages preview (subpath baseURL).
+
+  Usage in markdown:
+    {{< relimg src="pedagogy/Belson.png" alt="..." >}}
+*/ -}}
+{{- $src := strings.TrimPrefix "/" (.Get "src") -}}
+<img src="{{ $src | relURL }}" alt="{{ .Get "alt" }}"{{ with .Get "class" }} class="{{ . }}"{{ end }} />
