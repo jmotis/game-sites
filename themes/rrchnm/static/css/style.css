@@ -774,6 +774,37 @@ body {
 }
 
 /* ============================================================
+   QUICK FACTS LIST (hub home — red-square bullets, sibling of .bib-list)
+   ============================================================ */
+.quick-facts {
+  margin: 0;
+}
+
+.quick-facts__item {
+  padding: 10px 0 10px 28px;
+  position: relative;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.quick-facts__item::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 17px;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+}
+
+.quick-facts__item a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* ============================================================
    GAMES LIST PAGE (hub)
    ============================================================ */
 .games-inner {
@@ -844,24 +875,6 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-/* ============================================================
-   EMBEDDED GAME (iframe — plague-site /game/)
-   ============================================================ */
-.game-embed {
-  margin-top: 32px;
-}
-
-.game-embed__frame {
-  display: block;
-  width: 100%;
-  /* Tall enough to be playable while leaving the header visible.
-     min-height keeps it sensible on short viewports. */
-  height: calc(100vh - 220px);
-  min-height: 600px;
-  border: 2px solid var(--dark-bg);
-  background: var(--page-bg);
 }
 
 /* ============================================================
