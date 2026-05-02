@@ -733,9 +733,9 @@ body {
 }
 
 .bib-list {
-  margin: 56px 0 0;
-  border-top: 1px solid var(--dark-bg);
-  border-bottom: 1px solid var(--dark-bg);
+  /* No top/bottom borders — the surrounding .about-section supplies the
+     section-divider line above; the list ends naturally. */
+  margin: 0;
 }
 
 .bib-entry {
