@@ -6,9 +6,11 @@ meta: "Worksheet · PDF available"
 pdf: "PlagueGameOrganizer-Worksheet.pdf"
 ---
 
-**Directions:** Complete for each playthrough of the game.
+## Directions
 
-Date and time game started: ____________________
+Complete for each playthrough of the game.
+
+Date and time game started:
 
 ## Your Identity
 
@@ -20,19 +22,14 @@ Date and time game started: ____________________
 - **Religion:** Church of England · Dissident Protestant · Catholic
 - **Status:** Beggar · Day Labourer · Servant · Artisan · Merchant · Noble
 - **Location:** Inside city walls · Western suburbs (Westminster) · Western suburbs (other) · Northern suburbs · Eastern suburbs · Across the river in the southern suburbs
-
-## Household
-
-- Number of adults: ____________________
-- Number of children: ____________________
-- Number of servants: ____________________
+- **Household:** number of adults · number of children · number of servants
 
 ## After Completing the Game
 
-- **Did you die or survive?**
-- **Cause of death (if applicable):**
-- **Reputation:**
-- **Disposable Income:**
+- Did you die or survive?
+- Cause of death (if applicable):
+- Reputation:
+- Disposable Income:
 
 ## Reflection
 
@@ -41,10 +38,6 @@ Now think about the decisions you made while playing the game as your character.
 ### Top 3 Important Decisions
 
 For each, note **what** the decision was and **why** you think it mattered.
-
-1. ____________________
-2. ____________________
-3. ____________________
 
 ### Summary
 
