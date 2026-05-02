@@ -160,7 +160,21 @@ The new game appears automatically on:
 
 ### Update bibliography (hub)
 
-`games-hub/data/bibliography.yaml`. Each entry has `author`, `title`, `place`. Renders as a `<ul>` with red-square bullets, double-rule top, single-rule bottom.
+`games-hub/data/bibliography.yaml` is a list of **sections**, each with a `label` (rendered as an `<h2>` divider — same eyebrow treatment as the about page) and a list of `entries`. Each entry has a `text` field (HTML allowed via `safeHTML`) and an optional `url`.
+
+```yaml
+- label: "Scholarship"
+  entries:
+    - text: 'Author. (Year). <em>Title</em>. Publisher.'
+      url:  'https://example.com/'
+    - text: '...'
+
+- label: "Primary Sources"
+  entries:
+    - text: '...'
+```
+
+Add or split sections by adding more top-level `- label:` blocks. Entries within a section render as a `<ul>` with red-square bullets.
 
 ### Update About sections (both sites)
 
