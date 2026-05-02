@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $lessons := .Site.Data.lessons -}}
+{{- $lessons := .Pages.ByWeight -}}
 
 <div class="page-body">
   <div class="pedagogy-inner">
@@ -10,11 +10,13 @@
       {{- range $i, $lesson := $lessons }}
       <div class="lesson{{ if eq (mod $i 2) 1 }} lesson--alt{{ end }}" role="listitem">
         <div>
-          <h2 class="lesson__title">{{ .title }}</h2>
-          <p class="lesson__desc">{{ .description }}</p>
+          <h2 class="lesson__title">{{ .Title }}</h2>
+          <p class="lesson__desc">{{ .Description }}</p>
         </div>
-        <p class="lesson__meta">{{ .meta }}</p>
-        <a href="{{ .url }}" class="btn btn--download">Download</a>
+        {{- with .Params.meta }}
+        <p class="lesson__meta">{{ . | safeHTML }}</p>
+        {{- end }}
+        <a href="{{ .RelPermalink }}" class="btn btn--download">View &rarr;</a>
       </div>
       {{- end }}
     </div>

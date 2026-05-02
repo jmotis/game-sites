@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{- $pdf := "" -}}
+{{- with .Params.pdf -}}
+  {{- $pdf = $.Resources.GetMatch . -}}
+{{- end -}}
+<div class="page-body">
+  <article class="pedagogy-single">
+    <header class="pedagogy-single__header">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{- with .Description }}
+      <p class="page-intro">{{ . | safeHTML }}</p>
+      {{- end }}
+      {{- with $pdf }}
+      <p class="pedagogy-single__pdf">
+        <a href="{{ .RelPermalink }}" class="btn btn--download" download>Download PDF</a>
+      </p>
+      {{- end }}
+    </header>
+
+    <hr class="page-rule" />
+
+    <div class="pedagogy-single__body">
+      {{ .Content }}
+    </div>
+
+    <p class="pedagogy-single__back">
+      <a href="{{ "pedagogical-materials/" | relURL }}">&larr; All pedagogical materials</a>
+    </p>
+  </article>
+</div>
+{{ end }}

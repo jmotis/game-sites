@@ -4,6 +4,11 @@ languageCode  = "en-us"
 themesDir     = "../themes"
 theme         = "rrchnm"
 
+[markup.goldmark.renderer]
+  # Allow raw HTML in markdown content (used in pedagogy pages for <dl>
+  # glossaries, transcripts, etc.).
+  unsafe = true
+
 [params]
   siteName     = "Gaming the Great Plague"
   tagline      = "Can You Survive Living in London, 1665–1666?"
