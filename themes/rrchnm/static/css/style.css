@@ -883,11 +883,23 @@ body {
 .pedagogy-single {
   max-width: 760px;
   margin: 0 auto;
+  /* Match the 64px top gap between site header and h1 used by the
+     bib-inner / about-inner / pedagogy-inner wrappers. */
+  padding: 64px 0 0;
 }
 
 .pedagogy-single__pdf {
   text-align: center;
-  margin-top: 24px;
+  /* 56px above (gap from .page-intro to button) — paired with the
+     .page-rule margin-top override below to centre the button between
+     the subtitle text and the rule. */
+  margin: 56px 0 0;
+}
+
+/* Pull the page-rule closer than its 80px default so the Download PDF
+   button sits visually centred between the subtitle and the rule. */
+.pedagogy-single .page-rule {
+  margin: 56px 0 56px;
 }
 
 .pedagogy-single__body {
@@ -978,26 +990,6 @@ body {
 .pedagogy-single__body dd {
   margin-left: 0;
   margin-top: 4px;
-}
-
-.pedagogy-single__back {
-  margin-top: 56px;
-  text-align: center;
-  font-family: var(--sans);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.pedagogy-single__back a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.pedagogy-single__back a:hover,
-.pedagogy-single__back a:focus-visible {
-  text-decoration: underline;
 }
 
 /* ============================================================
