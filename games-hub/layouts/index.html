@@ -1,6 +1,5 @@
 {{ define "main" }}
-{{- $feat  := index (where .Site.Data.games "featured" true) 0 -}}
-{{- $inDev := .Site.Data.in_development -}}
+{{- $feat := index (where .Site.Data.games "featured" true) 0 -}}
 
 {{/* ── Hero ── */}}
 <section class="hero" aria-label="Site hero">
@@ -48,22 +47,15 @@
     </div>
   </div>
 
-  {{/* ── In Development ── */}}
+  {{/* ── Quick Facts ── */}}
   <div class="card-section">
-    {{ partial "orn-rule.html" (dict "label" "In Development" "site" .Site) }}
-    <div class="card-grid">
-      {{- range $inDev }}
-      <div class="card">
-        {{- with .subtitle }}
-        <p class="card__meta">{{ . }}</p>
-        {{- end }}
-        <h3 class="card__title">{{ .title }}</h3>
-        {{- with .description }}
-        <p class="card__desc">{{ . }}</p>
-        {{- end }}
-      </div>
-      {{- end }}
-    </div>
+    {{ partial "orn-rule.html" (dict "label" "Quick Facts" "site" .Site) }}
+    <ul class="quick-facts">
+      <li class="quick-facts__item">Games have a play time of 1&ndash;30 min. (depending on chance and choices).</li>
+      <li class="quick-facts__item">Designed for repeat play-through with different characters and/or player decisions.</li>
+      <li class="quick-facts__item">Pedagogical materials can scaffold games into lesson plans for 1&ndash;3 class sessions.</li>
+      <li class="quick-facts__item">Learn more about the scholarship behind educational gaming in our <a href="{{ "bibliography/" | relURL }}">bibliography</a>.</li>
+    </ul>
   </div>
 
 </div>
