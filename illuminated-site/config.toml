@@ -1,0 +1,44 @@
+baseURL       = "https://illuminated.rrchnm.org/"
+title         = "Adventures in Illuminating"
+languageCode  = "en-us"
+themesDir     = "../themes"
+theme         = "rrchnm"
+
+[markup.goldmark.renderer]
+  # Allow raw HTML in markdown content (consistent with the other
+  # sites; needed if pedagogy pages later use <dl> etc.).
+  unsafe = true
+
+[params]
+  siteName     = "Adventures in Illuminating"
+  tagline      = "Create an illuminated Book of Hours for your noble patron, c. 13th-century France."
+  # Olive / manuscript-gold drawn from the game's own palette.
+  primary      = "#8B6F1F"
+  primaryDark  = "#6F5818"
+  primaryDeep  = "#463710"
+  primarySoft  = "#F0E9D2"
+  # GMU Gold — substitutes for primary on the dark header surface
+  # where olive fails SC 1.4.11 (3:1). Used for nav underline +
+  # focus ring only. Matches the shipping-site approach.
+  primaryOnDark = "#FFC733"
+  contactEmail = "chnm@gmu.edu"
+
+[[menus.main]]
+  name   = "Home"
+  url    = "/"
+  weight = 1
+
+[[menus.main]]
+  name   = "Game"
+  url    = "https://jmotis.github.io/Adventures-in-Illuminating.html"
+  weight = 2
+
+[[menus.main]]
+  name   = "Pedagogical Materials"
+  url    = "/pedagogical-materials/"
+  weight = 3
+
+[[menus.main]]
+  name   = "About"
+  url    = "/about/"
+  weight = 4
